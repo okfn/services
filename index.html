@@ -4,20 +4,94 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+  <div class="banner">
+    <div class="people">
+      <div class="photo2"></div>
+      <div class="photo1"></div>
+      <div class="photo3"></div>
+    </div>
+    <div class="content">
+      <div class="wrapper">
+        <div class="text" data-stellar-ratio="0.2">
+          <h1>unlock the power of <strong>data</strong>.</h1>
+          <p>We are the open experts, with ten years experience in technology, training, policy, research, and pioneering openness in new areas.</p>
+          <a class="action" href="#services">See what we can do</a>
+        </div>
+        
+        <div class="ckan" data-stellar-ratio="0.1">
+          <p>We are the creators and licensors of CKAN, the world’s leading software for open data portals</p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div class="page-content" id="services">
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
+    <ul class="bullets first-content">
+      <li class="bullet three-col-bullet bullet-1">
+        <div class="bullet-icon bullet-icon-1 icon-ckan">
+        </div>
+        <div class="bullet-content">
+          <h2><a href="javascript:void(0)">CKAN Services</a></h2>
+          <p>Lorem dolor sit amet consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum impedit. Odit officia autem.</p>
+          <a class="more" href="javascript:void(0)">More</a>
+          </div>
+      </li>  
+      <li class="bullet three-col-bullet bullet-2">
+        <div class="bullet-icon bullet-icon-2 icon-support">
+        </div>
+        <div class="bullet-content">
+          <h2><a href="javascript:void(0)">Techical Support</a></h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum.</p>
+          <a class="more" href="javascript:void(0)">More</a>
+        </div>
       </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+      <li class="bullet three-col-bullet  bullet-3">
+        <div class="bullet-icon bullet-icon-3 icon-book">
+        </div>
+        <div class="bullet-content">
+          <h2><a href="javascript:void(0)">Open Data Training</a></h2>
+          <p>Lorem ipsum sit amet consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum impedit. Odit officia autem.</p>
+          <a class="more" href="javascript:void(0)">More</a>
+        </div>
+      </li> 
+    </ul>
+    
+    <section class="contact">
+      <div class="wrapper">
+        Want to discuss your requirements? <a href="#">Get in touch</a>.
+      </div>
+    </section>
+    
+    <section class="case-studies">
+      <ul class="wrapper">
+      <li class="dgu case-study">
+        <a href="javascript:void(0)">
+          <h4><span>Case study: Data.gov.uk</span></h4>
+          <p>The UK Government’s official open data portal provides a central “way into the wealth of government data” and aims to make that data “easy to find; easy to license; and easy to re-use.”</p>
+        </a>
+        </li>
+        <li class="pdeu case-study">
+        <a href="javascript:void(0)">
+          <h4><span>Case study: PublicData.eu</span></h4>
+          <p>PublicData.eu is a research prototype of a pan-European data catalogue and federation mechanism, running on CKAN and developed as part of the FP7-funded LOD2 project.</p>
+        </a>
+        </li>
+        <li class="helsinki case-study">
+        <a href="javascript:void(0)">
+          <h4><span>Case study: Helsinki</span></h4>
+          <p>The Helsinki Region Infoshare project aims to make regional information quickly and easily accessible to all. It is powered by CKAN and WordPress, using CKAN for the core functionality.</p>
+        </a>
+        </li>
+        <li class="iati case-study">
+        <a href="javascript:void(0)">
+          <h4><span>Case study: International Aid Transparency Initiative</span></h4>
+          <p>The International Aid Transparency Initiative is about making aid spending information easier to access and understand. It provides a common standard on which funding organizations can publish their activities.</p>
+        </a>
+        </li>
+      </ul>
+    </section>
+    
+  </div>
 
 </div>
