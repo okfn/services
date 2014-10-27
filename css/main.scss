@@ -82,7 +82,7 @@ body {
           background-image:url(../img/home-banner-1.jpg);
         }
         &.photo2 {
-          background-image:url(../img/home-banner-2.jpg);
+          @include retina-image('../img/home-banner-2', auto 591px, jpg);
         }
         &.photo3 {
           background-image:url(../img/home-banner-3.jpg);
@@ -193,7 +193,7 @@ body {
         
         @include media($large-screen) {
           &:after {
-            background-image:url(../img/laptop.png);
+            @include retina-image('../img/laptop', 607px auto);
             background-repeat:no-repeat;
             background-position:right bottom;
             height:323px;
@@ -334,8 +334,11 @@ body {
     position:relative;
     background-color:$dark-gray;
     text-align:center;
-    font-size:rem(30);
     font-weight: bold;
+    
+    @include media($large-screen) {
+      font-size:rem(30);
+    }
     
     .wrapper {
       padding: $base-spacing;
@@ -420,6 +423,10 @@ body {
             bottom:-200px;
             margin:0;
             @include transition (all 0.2s ease-in-out);
+            
+            .touch & {
+              display:none;
+            }
           }
           
           &:hover {

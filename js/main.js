@@ -53,6 +53,7 @@ $(document).ready(function() {
   $('.home .people').slick({
 	  //autoplay: true,
     arrows: false,
+    draggable: false
 	});
   
   $('body').waypoint(function(direction) {
