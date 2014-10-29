@@ -23,6 +23,18 @@ $(document).ready(function() {
     offset: -30 
   });
   
+  $('.page > .page-content > aside > ul').waypoint(function(direction) {
+    if (direction === 'down') {
+      $('.page > .page-content > aside > ul').addClass('sticky');
+    }
+    else {
+      $('.page > .page-content > aside > ul').removeClass('sticky');
+    }
+  }, 
+  { 
+    offset: 105 
+  });
+  
   //Stellar
   $.stellar({
     horizontalScrolling: false,

@@ -94,6 +94,7 @@ header.navigation {
   
   .nav {
     float: right;
+    margin-right:1em;
   }
 
   ul#navigation-menu {    
@@ -176,7 +177,7 @@ header.navigation {
     }
 
     a {
-      margin-right: $navigation-submenu-padding;
+      margin-right: 0;
     }
 
     > a {
