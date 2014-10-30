@@ -1,0 +1,360 @@
+/* home */
+.home {
+  
+  
+  .page-content {
+    position:relative;
+    z-index:2;
+    max-width: none;
+  }
+  .banner {
+    padding-top:0;
+    margin-bottom:0;
+    height:auto;
+    
+    .people {
+      display:none;
+      
+      @include media($large-screen) {
+        display:block;
+      }
+      
+      div {
+        height: 680px;
+        background-repeat:no-repeat;
+        background-position:center bottom;
+        margin-bottom:95px;
+        
+        &.photo1 {
+          background-image:url(../img/home-banner-1.jpg);
+        }
+        &.photo2 {
+          @include retina-image('../img/home-banner-2', auto 591px, jpg);
+        }
+        &.photo3 {
+          background-image:url(../img/home-banner-3.jpg);
+        }
+      }
+    }
+    
+    .content {
+      
+      @include media($large-screen) {
+        position:absolute;
+        width:100%;
+        top:0;
+      }
+        
+      .wrapper {
+        .text {
+          @include media($large-screen) {
+            top:100px;
+            
+            h1 {
+              margin-bottom:30px;
+              width:400px;
+            }
+          }
+          
+          @media screen and (min-height:$tall-screen) {           
+            top:180px;
+          }
+        }
+        
+        
+        @include media($large-screen) {
+          height: 650px;
+          
+          @media screen and (min-height:$tall-screen) {
+            height: 770px;
+          }
+        }
+      }
+      .ckan {
+        visibility:hidden;
+        
+         @media screen and (min-width:1100px) {
+            visibility:visible;
+         }
+
+        @include media($large-screen) {
+          position:absolute;
+          bottom:-120px;
+          height:80px;
+          width:100%;
+          z-index:1;
+          
+          @media screen and (min-height:$tall-screen) {
+            bottom:-5px;
+          }
+        }
+        
+        p {
+          padding: $base-spacing;
+          @include media($large-screen) {
+            margin-right:625px;
+          }
+          display:none;
+        }
+        
+        @include media($large-screen) {
+          &:after {
+            @include retina-image('../img/laptop', 607px auto);
+            background-repeat:no-repeat;
+            background-position:right bottom;
+            height:323px;
+            content:'';
+            display:block;
+            position:absolute;
+            bottom:0;
+            right:0;
+            width:607px;
+          }
+        }
+      }
+    }
+  }
+  
+  .page-content {
+    @include media($large-screen) {
+      -webkit-box-shadow: 0px -5px 21px 0px #fff;
+      -moz-box-shadow:    0px -5px 21px 0px #fff;
+      box-shadow:         0px -5px 21px 0px #fff;
+    }
+  }
+
+  .bullets {
+    $icon-bullet-size: 3.5em;
+    @include outer-container;
+    padding: $base-spacing;
+  
+    overflow: auto;
+    margin-bottom: $base-line-height;
+  
+    // change ".three-col-bullet" class to this for two bullet layout
+    .two-col-bullet {
+      @include media($large-screen) {
+        @include span-columns(6);
+        @include omega(2n);  
+      } 
+    }
+    
+    .three-col-bullet {
+      @include media($large-screen) {
+        @include span-columns(4);
+        @include omega(3n);
+      }
+    }
+  
+    // change ".three-col-bullet" class to this for four bullet layout
+    .four-col-bullet {
+      @include media($large-screen) {
+        @include span-columns(3);
+        @include omega(4n);
+      }
+    }
+  
+    .bullet-icon {
+      float: left;
+      background: $base-accent-color;
+      border-radius: 50%;
+      width: $icon-bullet-size;
+      height: $icon-bullet-size;
+      color:#fff;
+      text-align:center;
+    }
+  
+    .bullet-icon-1 {
+      background: $blue;
+      
+      &:before {
+        font-size:24px;
+        line-height:54px;
+      }
+    }
+  
+    .bullet-icon-2 {
+      background: $orange;
+      
+      &:before {
+        font-size:32px;
+        line-height:55px;
+      }
+    }
+  
+    .bullet-icon-3 {
+      background: $green;
+      
+      &:before {
+        font-size:45px;
+        line-height:78px;
+      }
+    }
+  
+    .bullet-content {
+      margin-left: $icon-bullet-size *1.4;
+      margin-bottom: 2em;
+    }
+  
+    h2 {
+      font-size: $icon-bullet-size /2.5;
+      padding-top: $icon-bullet-size /7;
+      margin-bottom: $icon-bullet-size /6;
+      display: inline-block;
+      
+      a {
+        color:$base-font-color;
+      }
+    }
+
+      
+    .bullet-1 .more {
+      @include button(flat, $blue);
+      color:#fff;
+    }
+    .bullet-2 .more {
+      @include button(flat, $orange);
+      color:#fff;
+    }
+    .bullet-3 .more {
+      @include button(flat, $green);
+      color:#fff;
+    }
+   
+    
+    @include media($large-screen) {
+      &.first-content:before {
+        content:'';
+        background-color:#fff;
+        width:445px;
+        height:100px;
+        display:block;
+        position:absolute;
+        top:-95px;
+      }
+    }
+  }
+  
+  section.contact {
+    color:#fff;
+    position:relative;
+    background-color:$dark-gray;
+    text-align:center;
+    font-weight: bold;
+    
+    @include media($large-screen) {
+      font-size:rem(30);
+    }
+    
+    .wrapper {
+      padding: $base-spacing;
+      padding-top:18px;
+      padding-bottom:18px;
+    }
+    
+    a {
+      color:#fff;
+      text-decoration:underline;
+    }
+  }
+  
+  .case-studies {
+    
+    .wrapper {
+      padding: $base-spacing $base-spacing $base-spacing 0;
+      
+      .case-study {
+        margin-left: $base-spacing;
+        
+        &:before {
+          background-color:$medium-gray;
+          content:'';
+          position:absolute;
+          top:0;
+          right:0;
+          bottom:0;
+          left:0;
+          background-position:center center;
+          background-size:cover;
+          @include filter(grayscale(60%));
+        }
+        
+        &:hover {
+          &:before {
+            @include filter(grayscale(100%));
+          }
+        }
+        
+        &.dgu:before {
+          background-image:url(../img/640px-Government_Offices_Great_George_Street.jpg);
+        }
+        &.pdeu:before {
+          background-image:url(../img/eu.jpg);
+        }
+        &.helsinki:before {
+          background-image:url(../img/helsinki.jpg);
+        }
+        &.iati:before {
+          background-image:url(../img/640px-USAID.jpg);
+        }
+          
+        a {
+          display:block;
+          height:200px;
+          position:relative;
+          background-image:url(../img/subtle_dots.png);
+          overflow:hidden;
+          
+          h4 {
+            color:#fff;
+            position:absolute;
+            bottom:20px;
+            left:20px;
+            text-transform:uppercase;
+            font-weight:900;
+            border-left:solid 3px $green;
+            line-height:1;
+            
+            span {
+              background-color:$green;
+              padding-right:3px;
+              line-height:1.1;
+            }
+          }
+          
+          p {
+            background-color:$green;
+            color:#fff;
+            display:block;
+            position:absolute;
+            padding: $base-spacing;
+            bottom:-200px;
+            margin:0;
+            @include transition (all 0.2s ease-in-out);
+            
+            .touch & {
+              display:none;
+            }
+          }
+          
+          &:hover {
+            @include media($large-screen) {
+              p {
+                bottom:0;
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    .slick-slider {
+      margin-bottom: 0;
+      
+      .slick-prev:before,
+      .slick-next:before {
+        color:$medium-gray;
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+/* contact */
+
+div.contact {
+  .page-content {
+  
+    form { 
+      padding: $base-spacing;
+      
+      p {
+        @include media($large-screen) {
+          font-size:rem(20);
+          margin-bottom:rem(20);
+        }
+      }
+      
+      fieldset {
+        background-color:inherit;
+        border: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      @include media($large-screen) {
+        @include span-columns(9);
+        
+        fieldset {
+          @include span-columns(4.5 of 9);
+          @include omega(odd);
+        }
+        
+        textarea,
+        input {
+          font-size:1.2em;
+          margin-bottom:rem(20);
+        }
+      }
+    }
+    aside { 
+      padding: $base-spacing;
+      background-color:$light-gray;
+      
+      h4 {
+        font-size:rem(18);
+      }
+      
+      @include media($large-screen) {
+        @include span-columns(3);
+        margin-top:$base-spacing;
+      }
+      
+      a {
+        @include button(flat, $medium-gray);
+        display:block;
+        margin-top:$base-spacing;
+        font-weight:normal;
+        
+        [class^="icon-"] {
+          font-size:rem(24);
+          float:left;
+          margin-left:-5px;
+          margin-right:10px;
+        }
+      }
+    }
+  }
+}

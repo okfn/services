@@ -122,7 +122,14 @@ header.navigation {
     text-decoration: none;
     width: auto;
     
-    &:hover {
+    &.current {
+      & > a {
+        background-color: transparentize($navigation-background-hover, 0.9);
+      }
+    }
+    
+    &:hover,
+    &.current:hover {
       a {
         background-color:$navigation-background-hover;
         color: $navigation-color-hover;
@@ -170,7 +177,6 @@ header.navigation {
   // Sub menus
 
   li.more.nav-link {
-    padding-right: 0;
     
     > ul > li:first-child a  {
       padding-top: 1em;

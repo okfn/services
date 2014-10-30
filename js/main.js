@@ -35,6 +35,24 @@ $(document).ready(function() {
     offset: 105 
   });
   
+  
+  //ckan services
+  $('.host-deploy figure').waypoint(function() {
+    $('.host-deploy figure img').addClass('bounceInLeft animated');
+  },
+  { offset: 'bottom-in-view' });
+  
+  $('.custom-development figure').waypoint(function() {
+    $('.custom-development figure img').addClass('rotateIn animated');
+  },
+  { offset: 'bottom-in-view' });
+  
+  $('.ckan-ex figure').waypoint(function() {
+    $('.ckan-ex figure img').addClass('lightSpeedIn animated');
+  },
+  { offset: 'bottom-in-view' });
+  
+  
   //Stellar
   $.stellar({
     horizontalScrolling: false,
