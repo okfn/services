@@ -1,7 +1,5 @@
 $(document).ready(function() {
   
-  
-  
   //mmenu
   $("#mmenu").mmenu({
      offCanvas: {
@@ -36,19 +34,24 @@ $(document).ready(function() {
   });
   
   
-  //ckan services
-  $('.host-deploy figure').waypoint(function() {
-    $('.host-deploy figure img').addClass('bounceInLeft animated');
+  //services
+  $('.service.host-deploy figure').waypoint(function() {
+    $('.service.host-deploy figure img').addClass('bounceInLeft animated');
   },
   { offset: 'bottom-in-view' });
   
-  $('.custom-development figure').waypoint(function() {
-    $('.custom-development figure img').addClass('rotateIn animated');
+  $('.service.custom-development figure').waypoint(function() {
+    $('.service.custom-development figure img').addClass('rotateIn animated');
   },
   { offset: 'bottom-in-view' });
   
-  $('.ckan-ex figure').waypoint(function() {
-    $('.ckan-ex figure img').addClass('lightSpeedIn animated');
+  $('.service.ckan-ex figure').waypoint(function() {
+    $('.service.ckan-ex figure img').addClass('lightSpeedIn animated');
+  },
+  { offset: 'bottom-in-view' });
+  
+  $('.service.training figure').waypoint(function() {
+    $('.service.training figure img').addClass('bounce animated');
   },
   { offset: 'bottom-in-view' });
   
@@ -89,13 +92,11 @@ $(document).ready(function() {
   $('body').waypoint(function(direction) {
     if (direction === 'down') {
       $('.home .people').slickPause();
-      $('.home .people').addClass('dim');
-      $('.home .banner .text').addClass('dim');
+      $('.banner').addClass('dim');
     }
     else {
       //$('.home .people').slickPlay();
-      $('.home .people').removeClass('dim');
-      $('.home .banner .text').removeClass('dim');
+      $('.banner').removeClass('dim');
     }
   }, 
   { 
@@ -150,5 +151,20 @@ $(document).ready(function() {
       },
     ]
 	});
+  
+  
+  //support
+  $('.feature figure').waypoint(function() {
+    jQuery(this).find('img').addClass('animated');
+  },
+  { offset: 'bottom-in-view' });
+  
+  //action
+  $('.js-accordion-trigger').bind('click', function(e){
+    jQuery(this).parents('.action').find('aside').slideToggle('fast'); 
+
+    jQuery(this).parents('.action').toggleClass('is-expanded');
+    e.preventDefault();
+  });
   
 });

@@ -1,6 +1,14 @@
 /* contact */
 
 div.contact {
+  
+  .banner {
+    .text {
+      @include media($large-screen) {
+        @include span-columns(9);
+      }
+    }
+  }
   .page-content {
   
     form { 

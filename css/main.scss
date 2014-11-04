@@ -41,6 +41,11 @@ body {
   @include transition (opacity 1.0s ease-in-out);
 }
 
+.grey {
+  @include filter(grayscale(50%));
+}
+
+
 @include media($large-screen) {
   h1 {
     font-size:rem(72);
@@ -69,6 +74,7 @@ body {
   background-size:auto 415px;
   background-position:center bottom;
   background-repeat:no-repeat;
+  background-attachment:fixed;
   
   .wrapper {
     position:relative;
@@ -95,7 +101,7 @@ body {
       @include media($large-screen) {
         position:absolute;
         left:0;
-        top:170px;
+        top:85px;
         width:490px;
         
         h1 {
@@ -237,6 +243,22 @@ body {
     }
   }
   
+  &.training {
+    figure {
+      background-color:$green;
+      img {
+        margin-top: 94px;
+        margin-left: 9px;
+      }
+    }
+    figcaption {
+      a {
+        @include button(flat, $green);
+        color:#fff;
+      }
+    }
+  }
+  
   &:nth-child(odd) {
     background-color:lighten( $light-gray, 6% );
     
@@ -259,6 +281,223 @@ body {
   }
 }
 
+.feature {
+  background-color:#fff;
+  
+  &:nth-of-type(even) {
+    background-color:lighten( $light-gray, 6% );
+  }
+  
+  .wrapper {
+    padding:$base-spacing;
+    
+    figure {
+      overflow:hidden;
+      position:relative;
+      display:none;
+      
+      img {
+        max-width:none;
+        @include transition (all 0.5s ease-in-out);
+      }
+      
+      @include media($large-screen) {
+        display: block;
+        @include span-columns(5);
+      }
+    }
+    
+    figcaption {
+      @include media($large-screen) {
+        @include span-columns(7);
+        padding-top:80px;
+        padding-bottom:80px;
+      }
+    }
+  }
+  
+  &:first-of-type {
+    .wrapper {
+      margin-top:40px;
+    }
+  }
+}
+
+div.support {
+  
+  .feature {
+    &.up-to-date {
+      figure {
+        height:218px;
+        margin-top:45px;
+        
+        .update {
+          position:absolute;
+          top:78px;
+          left:95px;
+          @include transition (transform 1s ease-in-out);
+          
+          &.animated {
+            @include transform(rotate(360deg));
+          }
+        }
+      }
+    }
+    
+    &.access {
+      overflow:hidden;
+      background-color:lighten( #474E5D, 10% );
+      color:#fff;
+      figure {
+        height:315px;
+        overflow:visible;
+        
+        img {
+          position:absolute;
+          left:50%;
+          bottom:-315px;
+          margin-left:-145px;
+          
+          &.animated {
+            bottom:- $base-spacing;
+          }
+        }
+      }
+    }
+    
+    &.developers {
+      figure {
+        height:246px;
+        overflow:visible;
+        
+        img {
+          position:absolute;
+          right:1000px;
+          top:24px;
+          
+          &.animated {
+            right:0;
+          }
+        }
+      }
+    }
+    
+    &.contracts {
+      figure {
+        padding-top:70px;
+        text-align:right;
+        
+        img {
+          &.animated {
+            @extend .bounce
+          }
+        }
+      }
+    }
+  }
+  
+  .action {
+    background-color:$orange;
+    
+    .wrapper {
+      padding:$base-spacing;
+      text-align:center;
+      
+      a {
+        @include button(flat, #fff);
+        margin:10px;
+        
+        &.contact {
+          @include button(flat, $dark-gray);
+        }
+        
+        &.js-accordion-trigger {
+          display:none;
+          
+          @include media($medium-screen) {
+            display:inline-block;
+          }
+        }
+      }
+    }
+    
+    aside {
+      background-color:transparentize(#fff, 0.2);
+      
+      .js & {
+        display:none;
+      }
+      
+      .wrapper {
+        text-align:left;
+      
+        th {
+          border:none;
+        }
+        td {
+          border-bottom-color: $orange;
+        }
+        
+        .prices {
+          td {
+            border-color:transparent;
+            font-weight:bold;
+            
+            &.price {
+              border-color:$orange;
+            }
+          }
+        }
+        
+        tbody {
+          
+          .yes {
+            span {
+              color:$orange;
+            }
+          }
+          
+          tr:hover {
+            td {
+              background-color:$orange;
+              
+              &.yes {
+                span {
+                  color:#fff
+                }
+              }
+            }
+          }
+          
+          .contact {
+            td {
+              text-align:center;
+              border:none;
+              background-color:transparent;
+              
+              a {
+                @include button(flat, $orange);
+                color:#fff;
+              }
+            }
+            &:hover {
+              td {
+                background-color:transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    &.is-expanded aside {
+      display: block;
+    }
+  }
+}
+@import "tables";
+
+
 //pages
 @import "home";
 @import "contact";
@@ -268,6 +507,20 @@ body {
     @include media($large-screen) {
       background-color:#fbf6f2;
       background-image:url(../img/services-banner.jpg);
+      
+      .text {
+        padding-right:0;
+      }
+    }
+  }
+}
+
+.support {
+  .banner {
+    @include media($large-screen) {
+      background-color:#fafaf8;
+      background-image:url(../img/support-banner.jpg);
+      background-position:right bottom;
     }
   }
 }
@@ -367,6 +620,22 @@ body {
 .page {
   
   .banner {
+    position:relative;
+    background-image:url(../img/subtle_dots.png);
+    background-repeat:repeat;
+    background-size:auto;
+    
+    .banner-image {
+      position:absolute;
+      top:0;
+      right:0;
+      bottom:0;
+      left:0;
+      background-size:cover;
+      background-position:center center;
+      opacity:0.2;
+    }
+    
     .wrapper {
       height:100%;
       .text {
@@ -401,8 +670,7 @@ body {
     padding: $base-spacing;
     
     & > a {
-      
-      
+           
     }
     
     @include media($large-screen) {
