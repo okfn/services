@@ -11,12 +11,12 @@
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <script src="{{ "/js/vendor/modernizr-2.6.2.min.js" | prepend: site.baseurl }}"></script>
     
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://services.okfn.org/apple-touch-icon-144x144.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://services.okfn.org/apple-touch-icon-152x152.png" />
-    <link rel="icon" type="image/png" href="http://services.okfn.org/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="http://services.okfn.org/favicon-16x16.png" sizes="16x16" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ "/apple-touch-icon-144x144.png" | prepend: site.baseurl }}" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ "/apple-touch-icon-152x152.png" | prepend: site.baseurl }}" />
+    <link rel="icon" type="image/png" href="{{ "/favicon-32x32.png" | prepend: site.baseurl }}" sizes="32x32" />
+    <link rel="icon" type="image/png" href="{{ "/favicon-16x16.png" | prepend: site.baseurl }}" sizes="16x16" />
     <meta name="application-name" content="Open Knowledge Services"/>
     <meta name="msapplication-TileColor" content="#2D2D2D" />
-    <meta name="msapplication-TileImage" content="http://services.okfn.org/mstile-144x144.png" />
+    <meta name="msapplication-TileImage" content="{{ "/mstile-144x144.png" | prepend: site.baseurl }}" />
 
 </head>
