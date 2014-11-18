@@ -171,7 +171,7 @@ $(document).ready(function() {
   $('.js-accordion-trigger').bind('click', function(e){
     jQuery(this).parents('.action').find('aside').slideToggle('fast'); 
 
-    jQuery(this).parents('.action').toggleClass('is-expanded');
+    jQuery(this).parents('.action').toggleClass('js-expanded');
     e.preventDefault();
   });
   
@@ -187,7 +187,7 @@ $(document).ready(function() {
   },
   { offset: 'bottom-in-view' });
   
-  $('.js-accordion-trigger').bind('click', function(e){
+  $('div.training .js-accordion-trigger').bind('click', function(e){
     jQuery(this).parents('section').find('aside').slideToggle('fast'); 
     e.preventDefault();
   });

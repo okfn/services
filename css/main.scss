@@ -383,23 +383,27 @@ div.support {
       background-color:lighten( #474E5D, 10% );
       color:#fff;
       figure {
-        height:315px;
+        height:329px;
         overflow:visible;
         
         img {
           position:absolute;
           left:50%;
-          bottom:-315px;
-          margin-left:-30px;
+          bottom:- $base-spacing;
+          margin-left:-145px;
           
           .js & {
-            margin-left:-145px;
+            bottom:-315px;
           }
           
           &.animated {
-            bottom:- 30px;
+            bottom:- $base-spacing;
           }
         }
+      }
+      
+      figcaption {
+        padding-bottom:0;
       }
     }
     
