@@ -631,8 +631,92 @@ div.training {
     h3 {
       margin-top:40px;
     }
+    
+    &.data-training {
+      figure {
+        img {
+          margin-top: 23px;
+          margin-left: -22px;
+        }
+      }
+    }
+    
+    &.technical-training {
+      figure {
+        img {
+          margin-top: -47px;
+          margin-left: -50px;
+        }
+      }
+    }
   }
 }
+
+
+section.quote {
+  background-color:$medium-gray;
+  background-size:cover;
+  background-position:center center;
+  background-attachment:fixed;
+  position:relative;
+  
+  blockquote {
+    @include outer-container;
+    padding:$base-spacing;
+    margin-top:0;
+    margin-bottom:0;
+    color:#fff;
+    position:relative;
+    z-index:1;
+    border:none;
+    
+    p {
+      @include media($large-screen) {
+        font-size:rem(24);
+      }
+      
+      &:first-of-type:before {
+        content:'\201C';
+        position:absolute;
+        left:9px;
+        font-size:rem(40);
+        margin-top:-10px;
+      }
+      &:last-of-type:after {
+        content:'\201D';
+        margin-left:3px;
+        position:absolute;
+        font-size:rem(40);
+        margin-top:-10px;
+      }
+    }
+    
+    cite {
+      color:#fff;
+      
+      &:before {
+        display:none;
+      }
+    }
+  }
+  
+  &:after {
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAGklEQVQIW2NkYGD4D8SMQAwGcAY2AbBKDBUAVuYCBQPd34sAAAAASUVORK5CYII=) repeat;
+    background-attachment:fixed;
+    opacity:0.5;
+  }
+  
+  &.rodolfo {
+    background-image:url(../img/rodolfo.jpg);
+  }
+}
+
 
 .screenshot {
   box-shadow: 0 3px 5px transparentize(black, .7);

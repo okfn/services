@@ -177,6 +177,16 @@ $(document).ready(function() {
   
   
   //training
+  $('.service.data-training figure').waypoint(function() {
+    $('.service.data-training figure img').addClass('bounceInLeft animated');
+  },
+  { offset: 'bottom-in-view' });
+  
+  $('.service.technical-training figure').waypoint(function() {
+    $('.service.technical-training figure img').addClass('rotateIn animated');
+  },
+  { offset: 'bottom-in-view' });
+  
   $('.js-accordion-trigger').bind('click', function(e){
     jQuery(this).parents('section').find('aside').slideToggle('fast'); 
     e.preventDefault();
