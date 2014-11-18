@@ -161,7 +161,7 @@ $(document).ready(function() {
 	});
   
   
-  //support
+  //features
   $('.feature figure').waypoint(function() {
     jQuery(this).find('img').addClass('animated');
   },
@@ -172,6 +172,13 @@ $(document).ready(function() {
     jQuery(this).parents('.action').find('aside').slideToggle('fast'); 
 
     jQuery(this).parents('.action').toggleClass('is-expanded');
+    e.preventDefault();
+  });
+  
+  
+  //training
+  $('.js-accordion-trigger').bind('click', function(e){
+    jQuery(this).parents('section').find('aside').slideToggle('fast'); 
     e.preventDefault();
   });
   

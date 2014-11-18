@@ -323,7 +323,37 @@ body {
   }
 }
 
+
+@import "tables";
+
+
+//pages
+@import "home";
+@import "contact";
+
+.ckan {
+  .banner {
+    @include media($large-screen) {
+      background-color:#fbf6f2;
+      background-image:url(../img/services-banner.jpg);
+      
+      .text {
+        padding-right:0;
+      }
+    }
+  }
+}
+
+
 div.support {
+  
+  .banner {
+    @include media($large-screen) {
+      background-color:#fafaf8;
+      background-image:url(../img/support-banner.jpg);
+      background-position:right bottom;
+    }
+  }
   
   .feature {
     &.up-to-date {
@@ -356,10 +386,14 @@ div.support {
           position:absolute;
           left:50%;
           bottom:-315px;
-          margin-left:-145px;
+          margin-left:-30px;
+          
+          .js & {
+            margin-left:-145px;
+          }
           
           &.animated {
-            bottom:- $base-spacing;
+            bottom:- 30px;
           }
         }
       }
@@ -372,8 +406,12 @@ div.support {
         
         img {
           position:absolute;
-          right:1000px;
+          right:0;
           top:24px;
+          
+          .js & {
+            right:1000px;
+          }
           
           &.animated {
             right:0;
@@ -495,32 +533,103 @@ div.support {
     }
   }
 }
-@import "tables";
 
 
-//pages
-@import "home";
-@import "contact";
-
-.ckan {
+div.training {
   .banner {
     @include media($large-screen) {
-      background-color:#fbf6f2;
-      background-image:url(../img/services-banner.jpg);
-      
-      .text {
-        padding-right:0;
-      }
+      background-color:#e5e0e1;
+      @include retina-image('../img/training-banner', auto 415px, jpg);
     }
   }
-}
+  
+  .service {
+    figure {
+      background-color:$green;
+    }
+    
+    figcaption {
+      @include clearfix;
+      
+      a {
+        @include button(flat, $green);
+        color:#fff;
+      }
+    }
+    
+    aside {
+      clear:both;
+      
+      .js & {
+        display:none;
+      }
+      
+      ul.modules {
+        margin-top:$base-spacing;
+        
+        @include media($medium-screen) {
+          @include columns(2);
+          @include column-gap(4em);
+          @include column-rule(1px solid $light-gray);
+        }
+        
+        li {
+          display: inline-block;
+        }
+      }
 
-.support {
-  .banner {
-    @include media($large-screen) {
-      background-color:#fafaf8;
-      background-image:url(../img/support-banner.jpg);
-      background-position:right bottom;
+      &#courses {        
+        ul.modules {
+          margin-top:($base-spacing * 2);
+          margin-bottom:$base-spacing;
+        }
+      }
+      
+      &#modules {
+        h4 {
+          padding-top:$base-spacing;
+        }
+        
+        ul {
+          li {
+            h5 {
+              margin-top:($base-spacing / 2);
+              padding-top:($base-spacing / 2);
+              border-top:1px solid $light-gray;
+            }
+            
+            &:nth-child(3n+1) {
+              h5 {
+                margin-top:0;
+                padding-top:0;
+                border:none;
+              }
+            }
+          }
+        }
+        
+        .options,
+        .costs {
+          background-color:#fff;
+          padding:$base-spacing;
+          margin-top:$base-spacing;
+          
+          h4 {
+            padding-top:0;
+          }
+        }
+        
+        .options {
+
+          ul {
+            @extend %default-ul;
+          }
+        }
+      }
+    }
+    
+    h3 {
+      margin-top:40px;
     }
   }
 }
@@ -652,9 +761,7 @@ div.support {
     padding: $base-spacing;
    
     ul {
-      list-style-type: disc;
-      margin-bottom: 0.75em;
-      padding-left: 1.5em;
+      @extend %default-ul;
     }
     
     @include media($large-screen) {
