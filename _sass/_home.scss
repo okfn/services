@@ -302,8 +302,18 @@
           display:block;
           height:200px;
           position:relative;
-          background-image:url(../img/subtle_dots.png);
           overflow:hidden;
+          
+          &:after {
+            content:'';
+            position:absolute;
+            top:0;
+            right:0;
+            bottom:0;
+            left:0;
+            @extend .dot-background;
+            opacity:0.1;
+          }
           
           h4 {
             color:#fff;
@@ -314,6 +324,7 @@
             font-weight:900;
             border-left:solid 3px $green;
             line-height:1;
+            z-index:1;
             
             span {
               background-color:$green;
@@ -331,6 +342,7 @@
             bottom:-200px;
             margin:0;
             @include transition (all 0.2s ease-in-out);
+            z-index:1;
             
             .touch & {
               display:none;

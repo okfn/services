@@ -15,6 +15,10 @@
 
 $tall-screen: 640px;
 
+.dot-background { 
+  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAGklEQVQIW2NkYGD4D8SMQAwGcAY2AbBKDBUAVuYCBQPd34sAAAAASUVORK5CYII=) repeat;
+}
+
 html {
   background-color: $dark-gray;
   overflow-x: hidden;
@@ -707,7 +711,7 @@ section.quote {
     right:0;
     bottom:0;
     left:0;
-    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAGklEQVQIW2NkYGD4D8SMQAwGcAY2AbBKDBUAVuYCBQPd34sAAAAASUVORK5CYII=) repeat;
+    @extend .dot-background;
     background-attachment:fixed;
     opacity:0.5;
   }
@@ -813,21 +817,6 @@ section.quote {
 .page {
   
   .banner {
-    position:relative;
-    background-image:url(../img/subtle_dots.png);
-    background-repeat:repeat;
-    background-size:auto;
-    
-    .banner-image {
-      position:absolute;
-      top:0;
-      right:0;
-      bottom:0;
-      left:0;
-      background-size:cover;
-      background-position:center center;
-      opacity:0.2;
-    }
     
     .wrapper {
       height:100%;
