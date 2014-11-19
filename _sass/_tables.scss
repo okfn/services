@@ -17,6 +17,10 @@
             background-color:$orange;
             color:#fff;
           }
+          &.red {
+            background-color:$red;
+            color:#fff;
+          }
         }
         td {
           vertical-align:top;
@@ -99,6 +103,10 @@
         }
         &.orange {
           background-color:$orange;
+          color:#fff;
+        }
+        &.red {
+          background-color:$red;
           color:#fff;
         }
         

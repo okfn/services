@@ -542,6 +542,221 @@ div.support {
   }
 }
 
+div.hosting {
+  
+  .banner {
+    @include media($large-screen) {
+      background-color:#e6e5e3;
+      background-image:url(../img/hosting-banner.jpg);
+      
+      .text {
+        width:595px;
+      }
+    }    
+  }
+  
+  .action {
+    background-color:$red;
+    
+    .wrapper {
+      padding:$base-spacing;
+      text-align:center;
+      
+      a {
+        @include button(flat, #fff);
+        margin:10px;
+        
+        &.contact {
+          @include button(flat, $dark-gray);
+        }
+        
+        &.js-accordion-trigger {
+          display:none;
+          
+          @include media($medium-screen) {
+            display:inline-block;
+          }
+        }
+      }
+    }
+    
+    aside {
+      background-color:transparentize(#fff, 0);
+      
+      .js & {
+        display:none;
+      }
+      
+      .wrapper {
+        text-align:left;
+      
+        th {
+          border:none;
+        }
+        td {
+          border-bottom-color: transparentize($red, 0.9);
+        }
+        
+        tbody {
+          
+          .yes {
+            span {
+              color:$red;
+            }
+            
+            &.express {
+              span {
+                color:$dark-blue;
+              }
+            }
+          }
+          
+          tr:hover {
+            td {
+              background-color:$dark-gray;
+              color:$light-gray;
+              
+              &.yes {
+                span {
+                  color:#fff;
+                }
+              }
+            }
+          }
+          
+          .contact {
+            td {
+              text-align:center;
+              border:none;
+              background-color:transparent;
+              
+              a {
+                @include button(flat, $red);
+                color:#fff;
+              }
+              
+              &.express {
+                a {
+                  @include button(flat, $dark-blue);
+                }
+              }
+            }
+            &:hover {
+              td {
+                background-color:transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    &.is-expanded aside {
+      display: block;
+    }
+  }
+}
+
+div.development {
+  
+  .banner {
+    @include media($large-screen) {
+      background-color:#e7ebec;
+      background-image:url(../img/development-banner.jpg);
+      background-position:right bottom;
+      position:relative;
+    
+      &:after {
+        content: '';
+        width:547px;
+        height:250px;
+        display:block;
+        @include retina-image('../img/development-screen', 547px auto, png);
+        background-repeat:no-repeat;
+        position:absolute;
+        left:50%;
+        bottom:0;
+      }
+    }
+  }
+  
+  .action {
+    background-color:$blue;
+    
+    .wrapper {
+      padding:$base-spacing;
+      text-align:center;
+      
+      a {
+        @include button(flat, #fff);
+        margin:10px;
+        
+        &.contact {
+          @include button(flat, $dark-gray);
+        }
+        
+        &.js-accordion-trigger {
+          display:none;
+          
+          @include media($medium-screen) {
+            display:inline-block;
+          }
+        }
+      }
+    }
+    
+    aside {
+      background-color:transparentize(#fff, 0.1);
+      
+      .js & {
+        display:none;
+      }
+      
+      .wrapper {
+        text-align:left;
+      
+        th {
+          border:none;
+        }
+        td {
+          border-bottom-color: transparentize($blue, 0.9);
+        }
+        
+        tbody {
+          
+          tr:hover {
+            td {
+              background-color:$blue;
+            }
+          }
+          
+          .contact {
+            td {
+              text-align:center;
+              border:none;
+              background-color:transparent;
+              
+              a {
+                @include button(flat, $blue);
+                color:#fff;
+              }              
+            }
+            &:hover {
+              td {
+                background-color:transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    &.is-expanded aside {
+      display: block;
+    }
+  }
+}
+
 
 div.training {
   .banner {
