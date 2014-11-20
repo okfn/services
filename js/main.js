@@ -192,4 +192,15 @@ $(document).ready(function() {
     e.preventDefault();
   });
   
+  
+  //hosting
+  $('.feature.setup figure').waypoint(function() {
+    $('.feature.setup figure img.screen').addClass('zoomIn');
+  },
+  { offset: 'bottom-in-view' });
+  
+  $('.feature.uptime figure').waypoint(function() {
+    $('.feature.uptime figure img.tick').addClass('flip');
+  },
+  { offset: 'bottom-in-view' });
 });

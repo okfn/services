@@ -287,6 +287,8 @@ body {
 
 .feature {
   background-color:#fff;
+  position:relative;
+  z-index:1;
   
   &:nth-of-type(even) {
     background-color:lighten( $light-gray, 6% );
@@ -317,12 +319,6 @@ body {
         padding-top:80px;
         padding-bottom:80px;
       }
-    }
-  }
-  
-  &:first-of-type {
-    .wrapper {
-      margin-top:40px;
     }
   }
 }
@@ -415,7 +411,7 @@ div.support {
         img {
           position:absolute;
           right:0;
-          top:24px;
+          top:30px;
           
           .js & {
             right:1000px;
@@ -553,6 +549,118 @@ div.hosting {
         width:595px;
       }
     }    
+  }
+  
+  .feature {
+    &.setup {
+      figure {
+        height:250px;
+        overflow:visible;
+        
+        img {
+          position:absolute;
+          
+          &.laptop {
+            top:45px;
+            right:0;
+          }
+          
+          &.screen {
+            left: 125px;
+            top: 102px;
+          }
+        }
+      }
+    }
+    
+    &.security {
+      figure {
+        height:250px;
+        overflow:visible;
+        
+        img {
+          position:absolute;
+          
+          &.https {
+            top:65px;
+            left:20px;
+          }
+          
+          &.lock {
+            left: 83px;
+            top: 101px;
+            
+            .js & {
+              top:72px;
+            }
+            
+            &.animated {
+              top: 101px;
+            }
+          }
+        }
+      }
+    }
+    
+    &.tailored {
+      figure {
+        height:268px;
+        margin-top:30px;
+        
+        img {
+          position:absolute;
+          left:50%;
+          margin-left:-127px;
+          
+          &.stack-1 {
+            top:0;
+            
+            .js & {
+              top:-146px;
+            }
+            
+            &.animated {
+              top:0;
+            }
+          }
+          &.stack-2 {
+            top:50%;
+            margin-top:-73px;
+          }
+          &.stack-3 {
+            bottom:0;
+            
+            .js & {
+              bottom:-146px;
+            }
+            
+            &.animated {
+              bottom:0;
+            }
+          }
+        }
+      }
+    }
+    
+    &.uptime {
+      figure {
+        height:250px;
+        
+        img {
+          position:absolute;
+          
+          &.servers {
+            top:60px;
+            left:50%;
+            margin-left:-102px;
+          }
+          &.tick {
+            left: 188px;
+            top: 102px;
+          }
+        }
+      }
+    }
   }
   
   .action {
