@@ -203,4 +203,21 @@ $(document).ready(function() {
     $('.feature.uptime figure img.tick').addClass('flip');
   },
   { offset: 'bottom-in-view' });
+  
+  
+  //development
+  $('.feature.extensions figure').waypoint(function() {
+    $('.feature.extensions figure img.pin').addClass('bounceInDown');
+  },
+  { offset: 'bottom-in-view' });
+  
+  $('.feature.integration figure').waypoint(function() {
+    $('.feature.integration figure img').addClass('flipInX');
+  },
+  { offset: 'bottom-in-view' });
+  
+   $('.feature.schemas figure').waypoint(function() {
+    $('.feature.schemas figure img.field-2').addClass('bounceInRight');
+  },
+  { offset: 'bottom-in-view' });
 });
