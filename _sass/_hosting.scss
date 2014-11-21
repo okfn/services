@@ -1,0 +1,226 @@
+div.hosting {
+  
+  .banner {
+    @include media($large-screen) {
+      background-color:#e6e5e3;
+      background-image:url(../img/hosting-banner.jpg);
+      
+      .text {
+        width:595px;
+      }
+    }    
+  }
+  
+  .feature {
+    &.setup {
+      figure {
+        height:250px;
+        overflow:visible;
+        
+        img {
+          position:absolute;
+          
+          &.laptop {
+            top:45px;
+            right:0;
+          }
+          
+          &.screen {
+            left: 125px;
+            top: 102px;
+          }
+        }
+      }
+    }
+    
+    &.security {
+      figure {
+        height:250px;
+        overflow:visible;
+        
+        img {
+          position:absolute;
+          
+          &.https {
+            top:65px;
+            left:20px;
+          }
+          
+          &.lock {
+            left: 83px;
+            top: 101px;
+            
+            .js & {
+              top:72px;
+            }
+            
+            &.animated {
+              top: 101px;
+            }
+          }
+        }
+      }
+    }
+    
+    &.tailored {
+      figure {
+        height:268px;
+        margin-top:30px;
+        
+        img {
+          position:absolute;
+          left:50%;
+          margin-left:-127px;
+          
+          &.stack-1 {
+            top:0;
+            
+            .js & {
+              top:-146px;
+            }
+            
+            &.animated {
+              top:0;
+            }
+          }
+          &.stack-2 {
+            top:50%;
+            margin-top:-73px;
+          }
+          &.stack-3 {
+            bottom:0;
+            
+            .js & {
+              bottom:-146px;
+            }
+            
+            &.animated {
+              bottom:0;
+            }
+          }
+        }
+      }
+    }
+    
+    &.uptime {
+      figure {
+        height:250px;
+        
+        img {
+          position:absolute;
+          
+          &.servers {
+            top:60px;
+            left:50%;
+            margin-left:-102px;
+          }
+          &.tick {
+            left: 188px;
+            top: 102px;
+          }
+        }
+      }
+    }
+  }
+  
+  .action {
+    background-color:$red;
+    
+    .wrapper {
+      padding:$base-spacing;
+      text-align:center;
+      
+      a {
+        @include button(flat, #fff);
+        margin:10px;
+        
+        &.contact {
+          @include button(flat, $dark-gray);
+        }
+        
+        &.js-accordion-trigger {
+          display:none;
+          
+          @include media($medium-screen) {
+            display:inline-block;
+          }
+        }
+      }
+    }
+    
+    aside {
+      background-color:transparentize(#fff, 0);
+      
+      .js & {
+        display:none;
+      }
+      
+      .wrapper {
+        text-align:left;
+      
+        th {
+          border:none;
+        }
+        td {
+          border-bottom-color: transparentize($red, 0.9);
+        }
+        
+        tbody {
+          
+          .yes {
+            span {
+              color:$red;
+            }
+            
+            &.express {
+              span {
+                color:$dark-blue;
+              }
+            }
+          }
+          
+          tr:hover {
+            td {
+              background-color:$dark-gray;
+              color:$light-gray;
+              
+              &.yes {
+                span {
+                  color:#fff;
+                }
+              }
+            }
+          }
+          
+          .contact {
+            td {
+              text-align:center;
+              border:none;
+              background-color:transparent;
+              
+              a {
+                @include button(flat, $red);
+                color:#fff;
+              }
+              
+              &.express {
+                a {
+                  @include button(flat, $dark-blue);
+                }
+              }
+            }
+            &:hover {
+              td {
+                background-color:transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    &.is-expanded aside {
+      display: block;
+    }
+  }
+}

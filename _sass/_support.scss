@@ -1,0 +1,192 @@
+div.support {
+  
+  .banner {
+    @include media($large-screen) {
+      background-color:#fafaf8;
+      background-image:url(../img/support-banner.jpg);
+      background-position:right bottom;
+    }
+  }
+  
+  .feature {
+    &.up-to-date {
+      figure {
+        height:218px;
+        margin-top:45px;
+        
+        .update {
+          position:absolute;
+          top:78px;
+          left:95px;
+          @include transition (transform 1s ease-in-out);
+          
+          &.animated {
+            @include transform(rotate(360deg));
+          }
+        }
+      }
+    }
+    
+    &.access {
+      overflow:hidden;
+      background-color:lighten( #474E5D, 10% );
+      color:#fff;
+      figure {
+        height:329px;
+        overflow:visible;
+        
+        img {
+          position:absolute;
+          left:50%;
+          bottom:- $base-spacing;
+          margin-left:-145px;
+          
+          .js & {
+            bottom:-315px;
+          }
+          
+          &.animated {
+            bottom:- $base-spacing;
+          }
+        }
+      }
+      
+      figcaption {
+        padding-bottom:0;
+      }
+    }
+    
+    &.developers {
+      figure {
+        height:246px;
+        overflow:visible;
+        
+        img {
+          position:absolute;
+          right:0;
+          top:30px;
+          
+          .js & {
+            right:1000px;
+          }
+          
+          &.animated {
+            right:0;
+          }
+        }
+      }
+    }
+    
+    &.contracts {
+      figure {
+        padding-top:70px;
+        text-align:right;
+        
+        img {
+          &.animated {
+            @extend .bounce
+          }
+        }
+      }
+    }
+  }
+  
+  .action {
+    background-color:$orange;
+    
+    .wrapper {
+      padding:$base-spacing;
+      text-align:center;
+      
+      a {
+        @include button(flat, #fff);
+        margin:10px;
+        
+        &.contact {
+          @include button(flat, $dark-gray);
+        }
+        
+        &.js-accordion-trigger {
+          display:none;
+          
+          @include media($medium-screen) {
+            display:inline-block;
+          }
+        }
+      }
+    }
+    
+    aside {
+      background-color:transparentize(#fff, 0.2);
+      
+      .js & {
+        display:none;
+      }
+      
+      .wrapper {
+        text-align:left;
+      
+        th {
+          border:none;
+        }
+        td {
+          border-bottom-color: $orange;
+        }
+        
+        .prices {
+          td {
+            border-color:transparent;
+            font-weight:bold;
+            
+            &.price {
+              border-color:$orange;
+            }
+          }
+        }
+        
+        tbody {
+          
+          .yes {
+            span {
+              color:$orange;
+            }
+          }
+          
+          tr:hover {
+            td {
+              background-color:$orange;
+              
+              &.yes {
+                span {
+                  color:#fff
+                }
+              }
+            }
+          }
+          
+          .contact {
+            td {
+              text-align:center;
+              border:none;
+              background-color:transparent;
+              
+              a {
+                @include button(flat, $orange);
+                color:#fff;
+              }
+            }
+            &:hover {
+              td {
+                background-color:transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    &.is-expanded aside {
+      display: block;
+    }
+  }
+}

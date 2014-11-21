@@ -1,0 +1,12 @@
+div.ckan {
+  .banner {
+    @include media($large-screen) {
+      background-color:#fbf6f2;
+      background-image:url(../img/services-banner.jpg);
+      
+      .text {
+        padding-right:0;
+      }
+    }
+  }
+}

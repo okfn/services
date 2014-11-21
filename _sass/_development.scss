@@ -1,0 +1,231 @@
+div.development {
+  
+  .banner {
+    @include media($large-screen) {
+      background-color:#e7ebec;
+      background-image:url(../img/development-banner.jpg);
+      background-position:right bottom;
+      position:relative;
+    
+      &:after {
+        content: '';
+        width:547px;
+        height:250px;
+        display:block;
+        @include retina-image('../img/development-screen', 547px auto, png);
+        background-repeat:no-repeat;
+        position:absolute;
+        left:50%;
+        bottom:0;
+      }
+    }
+  }
+  
+  .feature {
+    &.extensions {
+      figure {
+        height:255px;
+        
+        img {
+          position:absolute;
+          
+          &.map {
+            bottom:0;
+            left:50%;
+            margin-left:-182px;
+          }
+          
+          &.pin {
+            left: 183px;
+            top: 43px;
+          }
+        }
+      }
+    }
+    
+    &.theming {
+      figure {
+        height:250px;
+        margin-top:45px;
+        
+        img {
+          position:absolute;
+          left:50%;
+          
+          &.shadow {
+            bottom:0;
+            margin-left:-135px;
+            
+            .js & {
+              opacity:0;
+            }
+            
+            &.animated {
+              opacity:1;
+            }
+          }
+          
+          &.drop-blue {
+            margin-left: -136px;
+            top: 0;
+            
+            .js & {
+              top:-200px;
+            }
+            
+            &.animated {
+              top: 0;
+            }
+          }
+          &.drop-green {
+            margin-left: -8px;
+            top: 0;
+            
+            .js & {
+              top:-200px;
+            }
+            
+            &.animated {
+              top: 0;
+            }
+          }
+          &.drop-grey {
+            margin-left: -75px;
+            top: 39px;
+            
+            .js & {
+              top:-200px;
+            }
+            
+            &.animated {
+              top: 39px;
+            }
+          }
+        }
+      }
+    }
+    
+    &.integration {
+      figure {
+        height:354px;
+        margin-top:- $base-spacing;
+        margin-bottom:- $base-spacing;
+        
+        img {
+          position:absolute;
+          
+          &.puzzle-grey {
+            left: 39px;
+            top: 166px;
+          }
+          
+          &.puzzle-red {
+            left: 140px;
+            top: 72px;
+          }
+          
+          &.puzzle-blue {
+            left: 45px;
+            top: -19px;
+          }
+        }
+      }
+    }
+    
+    &.schemas {
+      figure {
+        height:250px;
+        overflow:visible;
+        
+        img {
+          position:absolute;
+          left:50px;
+          
+          &.field-1 {
+            top:57px;
+          }
+          
+          &.field-2 {
+            top: 170px;
+          }
+        }
+      }
+    }
+  }
+  
+  .action {
+    background-color:$blue;
+    
+    .wrapper {
+      padding:$base-spacing;
+      text-align:center;
+      
+      a {
+        @include button(flat, #fff);
+        margin:10px;
+        
+        &.contact {
+          @include button(flat, $dark-gray);
+        }
+        
+        &.js-accordion-trigger {
+          display:none;
+          
+          @include media($medium-screen) {
+            display:inline-block;
+          }
+        }
+      }
+    }
+    
+    aside {
+      background-color:transparentize(#fff, 0.1);
+      
+      .js & {
+        display:none;
+      }
+      
+      .wrapper {
+        text-align:left;
+      
+        th {
+          border:none;
+        }
+        td {
+          border-bottom-color: transparentize($blue, 0.9);
+        }
+        
+        tbody {
+          
+          tr:hover {
+            td {
+              background-color:$blue;
+            }
+          }
+          
+          .contact {
+            td {
+              text-align:center;
+              border:none;
+              background-color:transparent;
+              
+              a {
+                @include button(flat, $blue);
+                color:#fff;
+              }              
+            }
+            &:hover {
+              td {
+                background-color:transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    &.is-expanded aside {
+      display: block;
+    }
+  }
+}
