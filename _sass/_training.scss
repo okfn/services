@@ -17,6 +17,15 @@ div.training {
       a {
         @include button(flat, $green);
         color:#fff;
+        &.js-accordion-trigger {
+          display:none;
+        }
+          
+        @include media($medium-screen) {
+          &.js-accordion-trigger {
+            display:inline-block;
+          }
+        }
       }
     }
     
