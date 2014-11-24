@@ -279,23 +279,56 @@
           @include filter(grayscale(60%));
         }
         
+        &:after {
+          position:absolute;
+          right: -77px;
+          top: 90px;
+          font-size:9px;
+          width:180px;
+          height:20px;
+          text-align:right;
+          color:#fff;
+          text-shadow: 1px 0px rgba(0,0,0,0.30);
+          @include transform(rotate(-90deg));
+          opacity:0.8;
+          @include transition (all 0.2s ease-in-out);
+        }
+        
         &:hover {
           &:before {
             @include filter(grayscale(100%));
           }
+          
+          &:after {
+            opacity:0;
+          }
         }
         
-        &.dgu:before {
-          background-image:url(../img/640px-Government_Offices_Great_George_Street.jpg);
+        &.dgu {
+          &:before {
+            background-image:url(../img/640px-Government_Offices_Great_George_Street.jpg);
+          }
+          &:after {
+            content:'Carlos Delgado; CC-BY-SA';
+          }
         }
-        &.pdeu:before {
-          background-image:url(../img/eu.jpg);
+        &.pdeu {
+          &:before {
+            background-image:url(../img/eu.jpg);
+          }
         }
-        &.helsinki:before {
-          background-image:url(../img/helsinki.jpg);
+        &.helsinki {
+          &:before {
+            background-image:url(../img/helsinki.jpg);
+          }
+          &:after {
+            content:'Diego Delso; CC-BY-SA';
+          }
         }
-        &.iati:before {
-          background-image:url(../img/640px-USAID.jpg);
+        &.iati {
+          &:before {
+            background-image:url(../img/640px-USAID.jpg);
+            }
         }
           
         a {
