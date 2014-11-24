@@ -1,0 +1,29 @@
+/* 404 */
+.oops {
+  height:100%;
+  
+  body {
+    height:100%;
+  
+    .page {
+      height:100%;
+    
+      .banner {
+        height:100%;
+        background-image:url(../img/404.jpg);
+        background-size:contain;
+        background-position:center center;
+        background-repeat:no-repeat;
+        
+        h1 {
+          text-align:center;
+          position:fixed;
+          top:50%;
+          width:100%;
+          margin-top:-50px;
+          color:#fff;
+        }
+      }
+    }
+  }
+}
