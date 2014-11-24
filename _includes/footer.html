@@ -52,8 +52,12 @@
 <nav id="mmenu">
   {% include menu.html %}
 </nav>
-
+<!--[if lt IE 9]>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<!--<![endif]-->
+<!--[if gt IE 8]><!-->
 <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+<!--<![endif]-->
 <script src="{{ "/js/vendor/waypoints.min.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/js/vendor/jquery.mmenu.min.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/js/vendor/jquery.stellar.min.js" | prepend: site.baseurl }}"></script>

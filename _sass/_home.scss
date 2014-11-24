@@ -1,7 +1,6 @@
 /* home */
 .home {
   
-  
   .page-content {
     position:relative;
     z-index:2;
@@ -265,6 +264,7 @@
       
       .case-study {
         margin-left: $base-spacing;
+        position:relative;
         
         &:before {
           background-color:$medium-gray;

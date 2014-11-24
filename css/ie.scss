@@ -1,0 +1,44 @@
+---
+# Internet Explorer
+---
+
+.lt-ie9 {
+  
+  #mmenu {
+    display:none;
+  }
+  
+  header.navigation {
+    .logo {
+      background-image: url("../img/logo_small.png");
+    }
+    
+    ul#navigation-menu {
+      display:inline;
+    }
+    
+    .navigation-menu-button {
+      display:none;
+    }
+    
+  }
+  
+  .home {
+    .bullets {
+      .three-col-bullet {
+        width:30%;
+        margin:0 10px 0 25px;
+        float:left;
+        
+        .bullet-icon {
+          display:none;
+        }
+        
+        .bullet-content {
+          margin-left:0;
+        }
+      }
+    }
+  }
+  
+}
