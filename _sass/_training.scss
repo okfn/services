@@ -46,7 +46,7 @@ div.training {
         }
         
         li {
-          display: block;
+          display: inline-block;
         }
       }
 
@@ -64,6 +64,8 @@ div.training {
         
         ul {
           li {
+            display: block; /*chome whitespace workaround */
+            
             h5 {
               margin-top:($base-spacing / 2);
               padding-top:($base-spacing / 2);
