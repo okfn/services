@@ -8,7 +8,7 @@ $(document).ready(function() {
   });
       
       
-  //waypoint
+  //scroll
   $('body').waypoint(function(direction) {
     if (direction === 'down') {
       $('body').addClass('scrolled');
@@ -21,17 +21,6 @@ $(document).ready(function() {
     offset: -30 
   });
   
-  $('.page > .page-content > aside > ul').waypoint(function(direction) {
-    if (direction === 'down') {
-      $('.page > .page-content > aside > ul').addClass('sticky');
-    }
-    else {
-      $('.page > .page-content > aside > ul').removeClass('sticky');
-    }
-  }, 
-  { 
-    offset: 105 
-  });
   
   
   //services

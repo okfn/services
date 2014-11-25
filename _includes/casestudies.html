@@ -1,0 +1,5 @@
+{% assign current = page.url | downcase | split: '/' %}
+<li{% if current[1] == 'data-gov-uk' %} class="current"{% endif %}><a href="{{ "/data-gov-uk/" | prepend: site.baseurl }}">data.gov.uk</a></li>
+<li{% if current[1] == 'publicdata-eu' %} class="current"{% endif %}><a href="{{ "/publicdata-eu/" | prepend: site.baseurl }}">publicdata.eu</a></li>
+<li{% if current[1] == 'helsinki' %} class="current"{% endif %}><a href="{{ "/helsinki/" | prepend: site.baseurl }}">helsinki</a></li>
+<li{% if current[1] == 'iati' %} class="current"{% endif %}><a href="{{ "/iati/" | prepend: site.baseurl }}">IATI registry</a></li>

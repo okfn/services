@@ -530,8 +530,29 @@ section.quote {
   aside {
     padding: $base-spacing;
     
-    & > a {
-           
+    h5 {
+      padding-left:$base-spacing / 4;
+    }
+    
+    ul li {
+      a {
+        display:block;
+        border-top:solid 1px $light-gray;   
+        padding: $base-spacing / 4;   
+        color: $base-font-color;
+        
+        &:hover {
+          background-color:transparentize($green, 0.8);
+        }
+      }
+      
+      &.current {
+        a {
+          background-color:$green;
+          color:#fff;
+          border-color:#fff;
+        }
+      }
     }
     
     @include media($large-screen) {
