@@ -1,0 +1,239 @@
+/* blog */
+.blog {
+  .banner {
+    @include media($large-screen) {
+      background-image:url(../img/blog-banner.png);
+      background-position:center top;
+    }
+  }
+  
+  section.posts {
+    $post-item-height: 180px;
+    $post-item-pad: 8px;
+    
+    @include outer-container;
+    padding: $base-spacing + em($post-item-pad) $base-spacing - em($post-item-pad);
+      
+    .post-list {
+      li {
+        margin-bottom:$base-spacing;
+        padding:$post-item-pad;
+        background-color:#fff;
+        
+        @include media($medium-screen) {
+          display:table !important;
+        }
+        
+        a {
+          background-color:$green;
+          padding:$base-spacing;
+          text-align:center;
+          vertical-align:middle;
+          display:block;
+          color:#fff;
+          font-size: rem(21);
+          background-size:cover;
+          background-position:center center;
+          
+          @include media($medium-screen) {
+            display:table-cell;
+            height:$post-item-height;
+            padding-top:0;
+            padding-bottom:0;
+            
+            span {
+              text-indent:-9999px;
+              display:block;
+              overflow:hidden;
+            }
+          }
+        }
+        &.ckan-category {
+          a {
+            background-color:$red;
+          }
+        }
+        
+        &.image,
+        &.thumb {
+          a {
+            background-color:$dark-gray;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.50);
+          }
+        }
+        
+      }
+      
+      &.one {
+        @include media($medium-screen) {
+       
+          li {
+            @include span-columns(6);
+            @include omega(2n);
+          }
+        }
+        @include media($large-screen) {
+          @include span-columns(8);
+          
+          li {
+            @include span-columns(4 of 8);
+            @include omega(2n);
+          }
+        }
+      }
+      &.two {
+        clear:both;
+        
+        li {
+          @include media(min-width $medium-screen max-width $large-screen) {
+            @include span-columns(6);
+            @include omega(2n);
+          }
+          @include media($large-screen) {
+            @include span-columns(4);
+            @include omega(3n);
+          }
+        }
+      }
+    }
+    
+    .twitter {
+      display:none;
+      @include media($large-screen) {
+        @include span-columns(4);
+        @include omega();
+        display:block;
+      }
+      background-color:$blue;
+      height: em($post-item-height) * 2 + $base-spacing + (em($post-item-pad) * 4);
+      color:#fff;
+      padding:$base-spacing;
+      border:solid $post-item-pad #fff;
+      
+      h6 {
+        width:48px;
+        height:48px;
+        overflow:hidden;
+        color:$blue;
+        border: solid 3px #fff;
+        border-radius:50%;
+        padding:8px;
+        margin-bottom:15px;
+        
+        &:before {
+          color:#fff;
+          font-size:27px;
+        }
+      }
+      
+      a {
+        color:#fff;
+        
+        &.more-link {
+          &:after {
+            border-color:#fff;
+          }
+        }
+      }
+      
+      ul {
+        height: 262px;
+        overflow:hidden;
+        
+        li {
+          border-bottom:dotted 2px #fff;
+          margin-bottom:0.8em;
+        }
+      }
+      
+      .user,
+      .timePosted,
+      .interact {
+        display:none;
+      }
+    }
+  }
+  
+  .rss-subscribe {
+    display:none;
+  }
+}
+
+.post {
+  .banner {
+    @include media($large-screen) {
+      background-position:center center;
+      background-size:cover;
+      height:300px;
+      background-attachment:scroll;
+    }
+    
+    .text {
+      top:30px;
+      
+      .post-author {
+        color:$dark-gray;
+        line-height:80px;
+        
+        .avatar {
+          background-color:$dark-gray;
+          display:block;
+          float:left;
+          width:80px;
+          height:80px;
+          background-image:url(../img/avatar.png);
+          background-size:cover;
+          background-position:center center;
+          border: solid 2px #fff;
+          border-radius:50%;
+          margin-right:10px;
+        }
+        
+        .name {
+          display:inline-block;
+          height:80px;
+          line-height:80px;
+          font-size:24px;
+        }
+      }
+      
+      &.background--dark {
+        @include media($large-screen) {
+          .post-author {
+            color:#fff;
+            
+            .avatar {
+              background-color:#fff;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .post-content {
+    @include outer-container;
+    padding:$base-spacing;
+    
+    .post-title {
+      font-weight:900;
+      font-size: 3rem;
+    }
+    
+    .post-date {
+      color:$medium-gray;
+    }
+    
+    article {
+   
+      ul {
+        @extend %default-ul;
+      }
+      
+      ol {
+        @extend %default-ol;
+      }
+    }
+  }
+}
+

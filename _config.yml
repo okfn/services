@@ -11,3 +11,6 @@ youtube_username:  openknowledgefdn
 
 # Build settings
 markdown: kramdown
+
+# Outputting
+permalink: /blog/:year/:month/:day/:title

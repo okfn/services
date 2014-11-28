@@ -3,13 +3,30 @@ layout: default
 ---
 <div class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
+  <div class="banner{% for category in page.categories %} {{ category | replace:' ','-' }}-category{% endfor %}" style="background-image:url({{site.baseurl }}/img/blog/{{ page.image }})">
+    <div class="wrapper">
+      <div class="text">
+        {% assign author = site.data.authors[page.author] %}
+        {% if author or page.author %}
+        
+        <a class="post-author"><span class="avatar"{% if author.avatar %} style="background-image:url({{ author.avatar }})"{% endif %}></span><span class="name">{% if author %}{{ author.name }}{% elsif page.author %}{{ page.author }}{% endif %}</span></a>
+        
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  
+  <section class="post-content">
 
-  <article class="post-content">
-    {{ content }}
-  </article>
+    <header class="post-header">
+      <h1 class="post-title">{{ page.title }}</h1>
+      <p class="post-date">{{ page.date | date: "%b %-d, %Y" }}</p>
+    </header>
+  
+    <article>
+      {{ content }}
+    </article>
+  
+  </section>
 
 </div>

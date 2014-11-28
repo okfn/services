@@ -61,6 +61,16 @@ header.navigation {
       margin-top:12px;
     }
   }
+  
+  &.background--dark {
+    .logo {
+      background-image:url(../img/logo-white.png);
+      
+      .scrolled & {
+        background-image:url(../img/logo.png);
+      }
+    }
+  }
 
 
   // Mobile view
@@ -290,7 +300,47 @@ header.navigation {
       top:-6px;
       margin-left:-12px;
     }
-  } 
+  }
+}
+
+.notscrolled {
+  header.navigation.background--dark {
+    ul li.nav-link {
+      a {
+        color:#fff;
+      }
+
+      &.contact {
+        a {
+          background-color: #fff;
+          color:$dark-gray;
+        }
+      }
+    }
+    li.more.nav-link > a:after {
+      color: #fff;
+    }
+    
+    ul.submenu {
+      opacity:0.9;
+      
+      li {
+        a {
+          background-color:#fff;
+          color:$dark-gray;
+        }
+      }
+      
+      &:before {
+        border-bottom-color:#fff;
+      }
+    }
+    ul li.nav-link:hover a,
+    ul li.nav-link.current:hover a {
+      background-color: #fff;
+      color: $dark-gray;
+    }
+  }
 }
 
 .mm-menu:after {

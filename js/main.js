@@ -9,12 +9,15 @@ $(document).ready(function() {
       
       
   //scroll
+  $('body').addClass('notscrolled');
   $('body').waypoint(function(direction) {
     if (direction === 'down') {
       $('body').addClass('scrolled');
+      $('body').removeClass('notscrolled');
     }
     else {
       $('body').removeClass('scrolled');
+      $('body').addClass('notscrolled');
     }
   }, 
   { 
@@ -209,4 +212,11 @@ $(document).ready(function() {
     $('.feature.schemas figure img.field-2').addClass('bounceInRight');
   },
   { offset: 'bottom-in-view' });
+
+  
+  //BackgroundCheck
+  BackgroundCheck.init({
+    targets: '.navigation, .banner .text',
+    images: '.banner'
+  });
 });
