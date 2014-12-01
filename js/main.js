@@ -1,5 +1,12 @@
 $(document).ready(function() {
   
+  var is_mobile = false;
+
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    is_mobile = true;       
+  }
+
+  
   //mmenu
   $("#mmenu").mmenu({
      offCanvas: {
@@ -49,10 +56,13 @@ $(document).ready(function() {
   
   
   //Stellar
-  $.stellar({
-    horizontalScrolling: false,
-    hideDistantElements: false,
-  });
+  if (is_mobile == false) {
+    $.stellar({
+      horizontalScrolling: false,
+      hideDistantElements: false,
+    });
+    $('body').addClass('stellar');
+  }
 
   
   //smooth scroll
