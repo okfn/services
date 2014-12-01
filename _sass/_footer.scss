@@ -110,4 +110,12 @@
     font-size:rem(12);
     color:$footer-disclaimer-color;
   }
+  
+  .attribution {
+    display:none;
+    
+    @include media($large-screen) {
+      display:inline;
+    }
+  }
 }
