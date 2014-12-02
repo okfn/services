@@ -23,4 +23,5 @@
   <label for="message">Message</label>
   <textarea name="message" rows="6" placeholder=""></textarea>
   <button type="submit">Send</button>
+  <input type="hidden" name="_next" value="{{ "/contact/?form=sent" | prepend: site.baseurl }}" />
 </form>
