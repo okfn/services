@@ -2,6 +2,7 @@
 layout: page
 title: International Aid Transparency Initiative
 permalink: /iati/
+banner: iati-banner.jpg
 ---
 
 The International Aid Transparency Initiative (IATI) is about making aid spending information easier to access and understand. It provides a common standard on which funding organizations can publish their activities, allowing stakeholders and third-parties to analyse and visualize this spending data. The <a href="http://iatiregistry.org/">IATI registry</a>, powered by CKAN, provides a centralized repository where publishers can register their activity files, making them discoverable and accessible to anyone interested via the web interface or the JSON API.

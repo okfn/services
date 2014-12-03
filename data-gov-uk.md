@@ -2,6 +2,8 @@
 layout: page
 title: data.gov.uk
 permalink: /data-gov-uk/
+banner: uk-banner.jpg
+attribution: Banner <a rel="nofollow external" href="https://www.flickr.com/photos/erwlas/8334360818">image</a> by Stuart Madden / <a rel="nofollow external" href="https://creativecommons.org/licenses/by/2.0/">CC BY</a>
 ---
 
 <a href="http://data.gov.uk/" title="Go to data.gov.uk">data.gov.uk</a> is the official Open Data portal of the UK Government. The site provides a central way into the wealth of government data, and aims to make that data 'easy to find, easy to license, and easy to re-use.' A beta version went live in October 2009, and the site was [publicly launched by Sir Tim Berners-Lee][TBL], the inventor of the World Wide Web, in January 2010.

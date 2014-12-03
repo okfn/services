@@ -2,6 +2,8 @@
 layout: page
 title: Helsinki
 permalink: /helsinki/
+banner: helsinki-banner.jpg
+attribution: Banner <a rel="nofollow external" href="https://www.flickr.com/photos/71011448@N08/13100296175">image</a> by Jaafar Alnasser / <a rel="nofollow external" href="https://creativecommons.org/licenses/by/2.0/">CC BY</a>
 ---
 
 <p>The <a href="http://www.hri.fi/en/" target="_blank">Helsinki Region Infoshare project</a> aims to make regional information quickly and easily accessible to all. It is powered by CKAN and Wordpress, using CKAN for the core functionality and data catalog and Wordpress for the CMS (e.g. News blog). The English version of the site is currently quite basic, however the native <a href="http://www.hri.fi/fi/data-haku/" target="_blank">Finnish site</a> has almost 900 datasets!</p>

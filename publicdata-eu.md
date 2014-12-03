@@ -2,6 +2,7 @@
 layout: page
 title: PublicData.eu
 permalink: /publicdata-eu/
+banner: europe-banner.jpg
 ---
 
 <a href="http://publicdata.eu/" title="Go to publicdata.eu">PublicData.eu</a> is a research prototype of a pan-European data catalogue and federation mechanism, developed as part of the FP7-funded LOD2 project. Based on CKAN, the site is developed as a use case and an early adopter of the LOD2 linked data stack technologies. After the LOD2 project’s launch in September 2010, a first version of the site was released in June 2011.
