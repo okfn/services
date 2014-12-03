@@ -106,10 +106,13 @@ div.development {
     }
     
     &.integration {
+      overflow:hidden;
+        
       figure {
         height:354px;
         margin-top:- $base-spacing;
         margin-bottom:- $base-spacing;
+        overflow:visible;
         
         img {
           position:absolute;

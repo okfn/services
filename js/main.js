@@ -214,7 +214,7 @@ $(document).ready(function() {
   { offset: 'bottom-in-view' });
   
   $('.feature.integration figure').waypoint(function() {
-    $('.feature.integration figure img').addClass('flipInX');
+    $('.feature.integration figure img').addClass('rollIn');
   },
   { offset: 'bottom-in-view' });
   
