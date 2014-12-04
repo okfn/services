@@ -51,6 +51,7 @@ div.training {
           &.list-2 {
             border-left:solid 1px $light-gray;
             padding-left:2em;
+            @include reset-display;
           }
         }
       }
