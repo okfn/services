@@ -10,6 +10,7 @@
   section.posts {
     $post-item-height: 180px;
     $post-item-pad: 8px;
+    background-color:#fff;
     
     @include outer-container;
     padding: $base-spacing + em($post-item-pad) $base-spacing - em($post-item-pad);
