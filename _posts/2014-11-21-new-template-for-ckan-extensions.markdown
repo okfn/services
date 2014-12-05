@@ -4,6 +4,7 @@ title:  "New Template for CKAN Extensions"
 date:   2014-11-21
 categories: ckan
 author: sean_hammond
+colour: 2d2d2d
 ---
 We've just <a href=" https://github.com/ckan/ckan/pull/1956">merged a new template for CKAN extensions</a>. Whenever you create a new CKAN extension using the <code>paster --plugin=ckan create -t ckanext ...</code> command (as documented in the <a href="http://docs.ckan.org/en/latest/extensions/tutorial.html">writing extensions tutorial</a>) it'll now use the new template, which gives you:
 

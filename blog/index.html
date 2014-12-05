@@ -20,8 +20,8 @@ js: twitterFetcher.fetch(tfeed1);
     <ul class="post-list one">
     
     {% for post in site.posts limit:4 %}
-    <li class="{% for category in post.categories %}{{ category | replace:' ','-' }}-category {% endfor %}{% if post.thumb %}thumb{% elsif post.image %}image{% endif %}">
-      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}"{% if post.thumb %} style="background-image:url({{site.baseurl }}/img/blog/{{ post.thumb }})"{% elsif post.image %} style="background-image:url({{site.baseurl }}/img/blog/{{ post.image }})"{% endif %}>{% if post.nothumbtext %}<span>{% endif %}{% if post.shorttitle %}{{ post.shorttitle }}{% else %}{{ post.title | truncate:60 }}{% endif %}{% if post.nothumbtext %}</span>{% endif %}</a>
+    <li class="{% for category in post.categories %}{{ category | replace:' ','-' }}-category {% endfor %}{% if post.thumb %}thumb{% elsif post.image %}image{% endif %}{% if post.textposition %} text-position{% endif %}{% if post.thumbposition %} thumbposition-{{ post.thumbposition }}{% endif %}">
+      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}"{% if post.thumb or post.image or post.colour %} style="{% endif %}{% if post.thumb %}background-image:url({{site.baseurl }}/img/blog/{{ post.thumb }});{% elsif post.image %} background-image:url({{site.baseurl }}/img/blog/{{ post.image }});{% endif %}{% if post.colour %} background-color:#{{ post.colour }};{% endif %}{% if post.thumb or post.image or post.colour %}"{% endif %}>{% if post.textposition %}<span class="text-position-{{ post.textposition }}">{% endif %}{% if post.shorttitle %}{{ post.shorttitle }}{% else %}{{ post.title | truncate:60 }}{% endif %}{% if post.textposition %}</span>{% endif %}</a>
     </li>
     {% endfor %}
     </ul>
@@ -35,8 +35,8 @@ js: twitterFetcher.fetch(tfeed1);
     
     <ul class="post-list two">
     {% for post in site.posts offset:4 limit:3 %}
-    <li class="{% for category in post.categories %}{{ category | replace:' ','-' }}-category {% endfor %}{% if post.thumb %}thumb{% elsif post.image %}image{% endif %}">
-      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}"{% if post.thumb %} style="background-image:url({{site.baseurl }}/img/blog/{{ post.thumb }})"{% elsif post.image %} style="background-image:url({{site.baseurl }}/img/blog/{{ post.image }})"{% endif %}>{% if post.nothumbtext %}<span>{% endif %}{% if post.shorttitle %}{{ post.shorttitle }}{% else %}{{ post.title | truncate:60 }}{% endif %}{% if post.nothumbtext %}</span>{% endif %}</a>
+    <li class="{% for category in post.categories %}{{ category | replace:' ','-' }}-category {% endfor %}{% if post.thumb %}thumb{% elsif post.image %}image{% endif %}{% if post.textposition %} text-position{% endif %}">
+      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}"{% if post.thumb or post.image or post.colour %} style="{% endif %}{% if post.thumb %}background-image:url({{site.baseurl }}/img/blog/{{ post.thumb }});{% elsif post.image %} background-image:url({{site.baseurl }}/img/blog/{{ post.image }});{% endif %}{% if post.colour %} background-color:#{{ post.colour }};{% endif %}{% if post.thumb or post.image or post.colour %}"{% endif %}>{% if post.textposition %}<span class="text-position-{{ post.textposition }}">{% endif %}{% if post.shorttitle %}{{ post.shorttitle }}{% else %}{{ post.title | truncate:60 }}{% endif %}{% if post.textposition %}</span>{% endif %}</a>
     </li>
     {% endfor %}
     </ul>

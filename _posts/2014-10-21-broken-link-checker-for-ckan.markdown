@@ -4,6 +4,7 @@ title:  "New Broken Link Checker Plugin for CKAN"
 date:   2014-10-21
 categories: ckan
 author: sean_hammond
+colour: E0AD00
 ---
 <a href="https://github.com/ckan/deadoralive">deadoralive</a> is a new broken-link checker service that works with CKAN and other sites, and <a href="https://github.com/ckan/ckanext-deadoralive">ckanext-deadoralive</a> is a CKAN plugin that you can install to integrate your CKAN site with the link checker. The pair have been developed by Open Knowledge as part of our work on the new version of <a href="http://oppnadata.se/">Öppnadata</a>, the Swedish national open data portal.
 

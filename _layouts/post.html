@@ -2,11 +2,10 @@
 layout: default
 ---
 <div class="post">
-
-  <div class="banner{% for category in page.categories %} {{ category | replace:' ','-' }}-category{% endfor %}" style="background-image:url({{site.baseurl }}/img/blog/{{ page.image }})">
+  {% assign author = site.data.authors[page.author] %}
+  <div class="banner{% for category in page.categories %} {{ category | replace:' ','-' }}-category{% endfor %}"{% if page.image %} style="background-image:url({{site.baseurl }}/img/blog/{{ page.image }})"{% elsif author.banner %} style="background-image:url({{site.baseurl }}/img/blog/{{ author.banner }})"{% endif %}>
     <div class="wrapper">
       <div class="text">
-        {% assign author = site.data.authors[page.author] %}
         {% if author or page.author %}
         
         <a class="post-author"><span class="avatar"{% if author.avatar %} style="background-image:url({{ author.avatar }})"{% endif %}></span><span class="name">{% if author %}{{ author.name }}{% elsif page.author %}{{ page.author }}{% endif %}</span></a>

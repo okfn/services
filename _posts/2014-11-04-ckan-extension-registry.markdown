@@ -4,6 +4,7 @@ title:  "CKAN Extension Registry - Share and Find CKAN Extensions"
 date:   2014-11-04
 categories: ckan
 author: rufus_pollock
+colour: 00a5e0
 ---
 We are happy to announce the new CKAN Extensions Registry which lists available CKAN Extensions:
 

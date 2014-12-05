@@ -2,9 +2,12 @@
 sean_hammond:
     name: Sean Hammond
     avatar: http://gravatar.com/avatar/96db4ce9d4616b4a31c94217ff31159d?s=160
+    banner: code-banner.jpg
 rufus_pollock:
     name: Rufus Pollock
     avatar: http://gravatar.com/avatar/9a05859ce895e24f593846e0096993d6?s=160
+    banner: rufus-banner.jpg
 adria_mercader:
     name: Adrià Mercader
     avatar: https://d8142femxnlg1.cloudfront.net/cropped-profile-photos/33bcf46f2b2a188d3a860f46b4f0d91725d6caf3-s300.jpeg
+    banner: git-banner.jpg

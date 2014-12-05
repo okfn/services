@@ -42,9 +42,18 @@
             padding-bottom:0;
             
             span {
-              text-indent:-9999px;
               display:block;
-              overflow:hidden;
+              
+              &.text-position-hide {
+                text-indent:-9999px;
+                overflow:hidden;
+              }
+            
+              &.text-position-right {
+                padding-left:46%;
+                text-align:left;
+                text-shadow:none;
+              }
             }
           }
         }
@@ -62,6 +71,26 @@
           }
         }
         
+        &.text-position {
+          a {
+            background-position: -9999px -9999px;
+            text-shadow:none;
+            background-repeat:no-repeat;
+            
+            @include media($medium-screen) {
+              background-size:contain;
+              background-position:center center;
+            }
+          }
+        }
+        
+        &.thumbposition-left {
+          a {
+             @include media($medium-screen) {
+              background-position:left center;
+            }
+          }
+        }
       }
       
       &.one {
