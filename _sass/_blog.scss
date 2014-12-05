@@ -244,6 +244,7 @@
   .post-content {
     @include outer-container;
     padding:$base-spacing;
+    background-color:#fff;
     
     .post-title {
       font-weight:900;
