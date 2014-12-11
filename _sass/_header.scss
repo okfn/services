@@ -321,6 +321,10 @@ header.navigation {
       color: #fff;
     }
     
+    li.more.nav-link:hover > a:after {
+      color: $dark-gray;
+    }
+    
     ul.submenu {
       opacity:0.9;
       
