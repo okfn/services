@@ -8,7 +8,7 @@ header.navigation {
   $navigation-height: 75px;
   $navigation-active-link-color: transparentize(white, 0.5);
   $navigation-submenu-padding: 1em;
-  $navigation-submenu-width: 12em;
+  $navigation-submenu-width: 13em;
   $horizontal-bar-mode: $large-screen;
 
   height: $navigation-height;
@@ -240,6 +240,9 @@ header.navigation {
     left: 0;
     position: absolute;
     top: $navigation-height;
+    background-color: $navigation-background-hover;
+    border-radius: $base-border-radius;
+    font-size:rem(14);
 
     .submenu {
       left: $navigation-submenu-width - .2em;
@@ -249,24 +252,38 @@ header.navigation {
         display:none;
       }
     }
+    
+    &.split {
+      @include columns(2);
+      @include column-gap(0);
+      width:$navigation-submenu-width * 2 + $navigation-submenu-padding;
+      left:- ($navigation-submenu-width / 2 + ($navigation-submenu-padding / 2));
+      padding:$navigation-submenu-padding * 1.5 $navigation-submenu-padding /2 $navigation-submenu-padding $navigation-submenu-padding / 2;
+      
+      & > span {
+        color:$navigation-color-hover;
+        text-transform:uppercase;
+        padding-bottom:3px;
+        margin-left:$navigation-submenu-padding;
+        margin-right:$navigation-submenu-padding;
+        margin-bottom:4px;
+        display:block;
+        border-bottom:solid 1px #fff;
+        opacity:0.6;
+        line-height:normal;
+        
+        &:nth-of-type(2) {
+          margin-top:8px; //force break
+        }
+      }
+    }
 
     li {
       display: block;
       padding-right: 0;
       line-height: 1.2;
 
-      &:first-child > a {
-        border-top-left-radius: $base-border-radius;
-        border-top-right-radius: $base-border-radius;
-        
-        .scrolled & {
-          border-top-left-radius: 0;
-        }
-      }
-
       &:last-child > a {
-        border-bottom-left-radius: $base-border-radius;
-        border-bottom-right-radius: $base-border-radius;
         padding-bottom: 1.2em;
       }
       
@@ -281,12 +298,10 @@ header.navigation {
         display: inline-block;
         padding-top:0.5em;
         padding-bottom:0.5em;
-        background-color: $navigation-background-hover;
         padding-left: $navigation-submenu-padding;
         text-align: left;
         width: $navigation-submenu-width;
         color: $navigation-color-hover;
-        border-radius:0;
         margin-top:0;
         margin-bottom:0;
       }
@@ -327,16 +342,23 @@ header.navigation {
     
     ul.submenu {
       opacity:0.9;
+      background-color:#fff;
       
       li {
         a {
-          background-color:#fff;
           color:$dark-gray;
         }
       }
       
       &:before {
         border-bottom-color:#fff;
+      }
+      
+      &.split {
+        & > span {
+          color:$dark-gray;
+          border-bottom-color:$dark-gray;
+        }
       }
     }
     ul li.nav-link:hover a,
@@ -347,6 +369,15 @@ header.navigation {
   }
 }
 
+.mm-menu {
+  .submenu > span {
+    padding: 10px 10px 10px 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: rgba(255, 255, 255, 0.3);
+    display:block;
+    margin-top:-1px;
+  }
+}
 .mm-menu:after {
   -webkit-box-shadow: inset 4px 0px 5px -2px rgba(0, 0, 0, 0.5);
   -moz-box-shadow:    inset 4px 0px 5px -2px rgba(0, 0, 0, 0.5);
