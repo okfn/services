@@ -1,0 +1,263 @@
+div.ckan-features {
+  $ckan-blue: #3d75ba;
+  
+  .banner {
+    @include media($large-screen) {
+      background-color:$ckan-blue;
+      background-image:url(../../img/ckan-banner.jpg);
+    }
+  }
+  
+  .feature {
+    overflow:hidden;
+    
+    article {
+      @include media($large-screen) {
+        padding-top:0;
+        padding-bottom:0;
+      }
+      
+      figure {
+        height:322px;
+        overflow:visible;
+      }
+      
+      p:last-of-type {
+        margin-bottom:0;
+      }
+    }
+    
+    &.search {
+      figure {  
+        img {
+          position:absolute;
+          top: 40px;
+          right:0;
+          @include media(950px) {
+            right:auto;
+          }
+          
+          .js & {
+            top: 400px;
+          }
+          
+          &.animated {
+            top: 40px;
+          }
+        }
+      }
+    }
+    
+    &.organise {
+      figure {  
+        img {
+          position:absolute;
+          
+          &.groups {
+            left:3px;
+            bottom: -35px;
+            @include transition-delay(0.2s);
+            
+            .js & {
+              bottom: -400px;
+            }
+            
+            &.animated {
+              bottom: -35px;
+            }
+          }
+          
+          &.group {
+            left:109px;
+            bottom: -10px;
+            
+            .js & {
+              bottom: -400px;
+            }
+            
+            &.animated {
+              bottom: -10px;
+            }
+          }
+        }
+      }
+    }
+    
+    &.metadata {
+      figure {  
+        img {
+          position:absolute;
+          top: 40px;
+          right:0;
+          @include media(1050px) {
+            right:auto;
+          }
+          
+          .js & {
+            top: 400px;
+          }
+          
+          &.animated {
+            top: 40px;
+          }
+        }
+      }
+    }
+    
+    &.previews {
+    }
+    
+    &.interaction {
+      figure {  
+        img {
+          position:absolute;
+          top: 75px;
+          right:0;
+          @include media(1100px) {
+            right:auto;
+          }
+          
+          .js & {
+            right:9999px;
+            @include media(1100px) {
+              right:auto;
+              left:-9999px;
+            }
+          }
+          
+          &.animated {
+            right:0;
+            @include media(1100px) {
+              right:auto;
+              left:0;
+            }
+          }
+        }
+      }
+    }
+    
+    &.management {
+      figure {  
+        img {
+          position:absolute;
+          top: 72px;
+          
+          .js & {
+            left: 2000px;
+          }
+          
+          &.animated {
+            left: 0;
+          }
+        }
+      }
+    }
+    
+    &.mobile {
+    }
+    
+    &.import {
+      figure {  
+        img {
+          position:absolute;
+          top: 40px;
+          @include media(950px) {
+            right:0;
+          }
+          
+          .js & {
+            left:9999px;
+            @include media(950px) {
+              left:auto;
+              right:-9999px;
+            }
+          }
+          
+          &.animated {
+            left:0;
+            @include media(950px) {
+              left:auto;
+              right:0;
+            }
+          }
+        }
+      }
+    }
+    
+    &.statistics {
+      figure {
+        overflow:hidden;
+        
+        img {
+          position:absolute;
+          right:0;
+          bottom:47px;
+          
+          .js & {
+            height:50px;
+          }
+          
+          &.animated {
+            height:227px;            
+          }
+        }
+      }
+    }
+    
+    &.formats {
+      figure {
+        
+        img {
+          position:absolute;
+          top:50%;
+          margin-top:-53px;
+          
+          .js & {
+            opacity:0.2;
+          }
+          
+          &.animated {
+            opacity:1;          
+          }
+        }
+      }
+    }
+    
+    &.api {
+      figure {
+        
+        img {
+          position:absolute;
+          bottom:0;
+          right:20px;
+          
+          .js & {
+            right:999px;
+          }
+          
+          &.animated {
+            right:20px;         
+          }
+        }
+      }
+    }
+  }
+  
+  .action {
+    background-color:$ckan-blue;
+    
+    .wrapper {
+      padding:$base-spacing;
+      text-align:center;
+      
+      a {
+        @include button(flat, #fff);
+        margin:10px;
+        
+        &.demo {
+          @include button(flat, $dark-gray);
+        }
+      }
+    }
+  }
+}
