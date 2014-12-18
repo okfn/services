@@ -105,6 +105,21 @@ div.ckan-features {
     }
     
     &.previews {
+      figure {  
+        img {
+          position:absolute;
+          bottom: 24px;
+          right:0;
+          
+          .js & {
+            height:24px;
+          }
+          
+          &.animated {
+            height:248px;
+          }
+        }
+      }
     }
     
     &.interaction {
