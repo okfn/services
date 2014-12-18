@@ -154,6 +154,22 @@ div.ckan-features {
     }
     
     &.mobile {
+      figure {  
+        img {
+          position:absolute;
+          bottom: 0;
+          left:50%;
+          margin-left:-153px;
+          
+          .js & {
+            bottom: -400px;
+          }
+          
+          &.animated {
+            bottom: 0;
+          }
+        }
+      }
     }
     
     &.import {
