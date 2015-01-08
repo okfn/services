@@ -1,15 +1,10 @@
       {% assign current = page.url | downcase | split: '/' %}
       <ul id="navigation-menu">
         <li class="nav-link more{% if current[1] == 'ckan' %} current{% endif %}"><a href="{{ "/ckan/" | prepend: site.baseurl }}">CKAN Services</a>
-          <ul class="split submenu">
-            <span>Our Services</span>
+          <ul class="submenu">
             <li><a href="{{ "/hosting/" | prepend: site.baseurl }}">Deployments &amp; Hosting</a></li>
             <li><a href="{{ "/development/" | prepend: site.baseurl }}">Development</a></li>
             <li><a href="{{ "/support/" | prepend: site.baseurl }}">Support</a></li>
-
-            <span>Our Platform</span>
-            <li><a href="{{ "/ckan/features" | prepend: site.baseurl }}">About CKAN</a></li>
-            <li><a href="http://ckan.okfn.org/">CKAN Demo</a></li>
           </ul>
         </li>
         
