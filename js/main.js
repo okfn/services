@@ -184,6 +184,11 @@ $(document).ready(function() {
   },
   { offset: 'bottom-in-view' });
   
+  $('.service.data-analytics figure').waypoint(function() {
+    $('.service.data-analytics figure img').addClass('flipInY animated');
+  },
+  { offset: 'bottom-in-view' });
+  
   $('.service.technical-training figure').waypoint(function() {
     $('.service.technical-training figure img').addClass('rotateIn animated');
   },
