@@ -360,67 +360,92 @@ body {
 @import "ckan-features";
 
 
-section.quote {
-  background-color:$medium-gray;
-  background-size:cover;
-  background-position:center center;
-  background-attachment:fixed;
-  position:relative;
+ul.quotes {
+  margin-bottom:0;
   
-  blockquote {
-    @include outer-container;
-    padding:$base-spacing;
-    margin-top:0;
-    margin-bottom:0;
-    color:#fff;
-    position:relative;
-    z-index:1;
-    border:none;
-    
-    p {
-      @include media($large-screen) {
-        font-size:rem(24);
-      }
-      
-      &:first-of-type:before {
-        content:'\201C';
-        position:absolute;
-        left:9px;
-        font-size:rem(40);
-        margin-top:-10px;
-      }
-      &:last-of-type:after {
-        content:'\201D';
-        margin-left:3px;
-        position:absolute;
-        font-size:rem(40);
-        margin-top:-10px;
-      }
-    }
-    
-    cite {
-      color:#fff;
-      
-      &:before {
-        display:none;
-      }
-    }
-  }
-  
-  &:after {
-    content:'';
-    position:absolute;
-    top:0;
-    right:0;
-    bottom:0;
-    left:0;
-    @extend .dot-background;
+  li {
+    background-color:$medium-gray;
+    background-size:cover;
+    background-position:center center;
     background-attachment:fixed;
-    opacity:0.5;
+    position:relative;
+    background-image:url(../img/quote-female.jpg);
+    
+    blockquote {
+      @include outer-container;
+      padding:$base-spacing;
+      margin-top:0;
+      margin-bottom:0;
+      color:#fff;
+      position:relative;
+      z-index:1;
+      border:none;
+      
+      p {
+        @include media($large-screen) {
+          font-size:rem(24);
+        }
+        
+        &:first-of-type:before {
+          content:'\201C';
+          position:absolute;
+          left:9px;
+          font-size:rem(40);
+          margin-top:-10px;
+        }
+        &:last-of-type:after {
+          content:'\201D';
+          margin-left:3px;
+          position:absolute;
+          font-size:rem(40);
+          margin-top:-10px;
+        }
+      }
+      
+      cite {
+        color:#fff;
+        
+        &:before {
+          display:none;
+        }
+      }
+    }
+    
+    &:after {
+      content:'';
+      position:absolute;
+      top:0;
+      right:0;
+      bottom:0;
+      left:0;
+      @extend .dot-background;
+      background-attachment:fixed;
+      opacity:0.5;
+    }
+    
+    &.male {
+      background-image:url(../img/quote-male.jpg);
+    }
+    &.rodolfo {
+      background-image:url(../img/rodolfo.jpg);
+    }
   }
   
-  &.rodolfo {
-    background-image:url(../img/rodolfo.jpg);
+  .slick-dots {
+    bottom: 5px;
+    
+    li {
+      background-image:none;
+      background-color:transparent;
+      
+      &:after {
+        background-image:none;
+      }
+      
+      button:before {
+        color:#fff;
+      }
+    }
   }
 }
 
