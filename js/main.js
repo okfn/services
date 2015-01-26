@@ -194,6 +194,23 @@ $(document).ready(function() {
     e.preventDefault();
   });
   
+  $('.quotes').equalize();
+  
+	$('.quotes').slick({
+    fade: true,
+    slide: 'li',
+    autoplay: true,
+    swipe: false,
+    infinite: true,
+    cssEase: 'linear',
+    arrows: false,
+    dots: true,
+    speed:500,
+    autoplaySpeed: 10000,
+    pauseOnHover: false,
+    pauseOnDotsHover: true
+	});
+  
   
   //hosting
   $('.feature.setup figure').waypoint(function() {
