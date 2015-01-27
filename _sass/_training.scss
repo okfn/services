@@ -19,6 +19,10 @@ div.training {
         color:#fff;
         &.js-accordion-trigger {
           display:none;
+          
+          .lt-ie9 & {
+            display:inline-block;
+          }
         }
           
         @include media($medium-screen) {
