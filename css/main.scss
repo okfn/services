@@ -430,6 +430,14 @@ ul.quotes {
     &.rodolfo {
       background-image:url(../img/rodolfo.jpg);
     }
+    
+    &.slick-slide {
+      background-attachment:scroll; /* for Chrome bug */
+      
+      &:after {
+        background-attachment:scroll; /* for Chrome bug */
+      }
+    }
   }
   
   .slick-dots {
