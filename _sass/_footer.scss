@@ -53,6 +53,10 @@
       &:hover {
         color: transparentize($footer-color, 0);
       }
+      
+      &[rel~="external"]:after {
+        display:none;
+      }
     }
     
     .footer-primary-links {

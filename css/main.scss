@@ -64,6 +64,12 @@ body {
   }
 }
 
+a[rel~="external"]:after {
+  content: "\ea7e";
+  @include icon-font();
+  margin-left:0.2rem;
+}
+
 
 @include media($large-screen) {
   h1 {

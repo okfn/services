@@ -57,6 +57,10 @@ div.training {
             padding-left:2em;
             @include reset-display;
           }
+          
+          li > a {
+            @include button(flat, $dark-gray);
+          }
         }
       }
 
@@ -87,7 +91,7 @@ div.training {
         
         .options,
         .costs {
-          background-color:#fff;
+          background-color:lighten( $light-gray, 6% );
           padding:$base-spacing;
           margin-top:$base-spacing;
           clear:both;
@@ -98,6 +102,10 @@ div.training {
         }
         
         .options {
+                
+          a.contact {
+            @include button(flat, $dark-gray);
+          }
 
           ul {
             @extend %default-ul;
