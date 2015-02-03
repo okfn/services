@@ -56,7 +56,7 @@ $(document).ready(function() {
   
   
   //Stellar
-  if (is_mobile == false) {
+  if (is_mobile == false && !$('html').hasClass('lt-ie10')) {
     $.stellar({
       horizontalScrolling: false,
       hideDistantElements: false,
