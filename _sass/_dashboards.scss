@@ -1,0 +1,102 @@
+div.dashboards {
+  .banner {
+    @include media($large-screen) {
+      background-color:#dae0de;
+      @include retina-image('../img/dashboards-banner', auto 415px, jpg);
+      
+      &:before {
+        display:block;
+        position:absolute;
+        background-color:#433D31;
+        top:0;
+        height:415px;
+        left:50%;
+        right:0;
+        content:'';
+        margin-left:775px;
+      }
+    }
+    
+    .wrapper .text {
+      max-width:475px;
+    }
+  }
+  
+  & > section {
+    padding-top:$base-spacing;
+    padding-bottom:$base-spacing;
+    background-color:#fff;
+    
+    article {
+      padding: $base-spacing;
+      
+      @include media($large-screen) {
+        @include span-columns(6);
+      }
+      
+      p:first-of-type {
+        font-size:rem(22);
+      }
+      
+      & > a {
+        @include button(flat, $dark-gray);
+      }
+    }
+    
+    aside {
+      padding: $base-spacing;
+      
+      @include media($large-screen) {
+        @include span-columns(6);
+      }
+      
+      li {
+        clear:both;
+        
+        figure {
+          border: solid 1px $light-gray;
+          display: none;
+          position: relative;
+          border-radius:50%;
+          margin-bottom:$base-spacing;
+          overflow:hidden;
+          max-width:145px;
+          max-height:145px;
+          
+          @include media($large-screen) {
+            display: inline-block;
+            @include span-columns(2 of 6);
+          }
+          
+          &:after {
+            content: '';
+            display: block;
+            margin-top: 100%;
+          }
+          
+          img {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            max-height:100%;
+          }
+        }
+        
+        figcaption {
+          @include media($large-screen) {
+            @include span-columns(4 of 6);
+            @include omega();
+          }
+          
+          h4 {
+            margin-top:15px;
+            margin-bottom:0;
+          }
+        }
+      }
+    }
+  }
+}
+  
