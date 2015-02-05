@@ -97,6 +97,16 @@ div.dashboards {
         }
       }
     }
+    .case-study {
+      background-color:rgba( $green, .07 );
+      
+      aside {
+        & > img {
+          border-radius:2px;
+          box-shadow: 0 3px 5px transparentize(black, .7);
+        }
+      }
+    }
   }
 }
   
