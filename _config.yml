@@ -3,7 +3,7 @@ title: Open Knowledge Services
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
   We are the open experts, with ten years experience in technology, training, policy, research, and pioneering openness.
-baseurl: "http://services.okfn.org" # the subpath of your site, e.g. /blog/
+# baseurl: "http://services.okfn.org" # the subpath of your site, e.g. /blog/
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: okfn
 facebook_username:  OKFNetwork
