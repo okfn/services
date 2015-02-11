@@ -244,6 +244,12 @@ $(document).ready(function() {
     $('.feature.schemas figure img.field-2').addClass('bounceInRight');
   },
   { offset: 'bottom-in-view' });
+  
+  
+  //Infographics
+  if (is_mobile == false) {
+    $('.infographics .feature article').equalize('innerHeight');
+  }
 
   
   //BackgroundCheck

@@ -1,0 +1,76 @@
+div.infographics {
+  .banner {
+    @include media($large-screen) {
+      @include retina-image('../img/infographics-banner', auto 415px, png);
+    }
+  }
+  
+  .feature {
+    
+    .wrapper {
+      @include media($large-screen) {
+        padding-top:0;
+        padding-bottom:0;
+      }
+      
+      figure {   
+        img {
+          position:absolute;
+        }
+      }
+      
+      figcaption {
+        & > a {
+          @include button(flat, $dark-gray);
+        }
+      }
+    }
+    
+    &.what {
+      figure {
+        img {
+          right:0;
+        }
+      }
+      figcaption {
+        & > a {
+          @include button(flat, $green);
+          color:#fff;
+        }
+      }
+    }
+    
+    &.global-witness {
+      figure {
+        img {
+          top:-86px;
+          right:0;
+          
+          .js & {
+            top:10px;
+          }
+          
+          &.animated {
+            top:-86px;
+          }
+        }
+      }
+    }
+    
+    &.wdmmg {
+      figure {
+        img {
+          top:30px;
+          
+          .js & {
+            top:60px;
+          }
+          
+          &.animated {
+            top:30px;
+          }
+        }
+      }
+    }
+  }
+}
