@@ -315,6 +315,7 @@ a[rel~="external"]:after {
   background-color:#fff;
   position:relative;
   z-index:1;
+  overflow:hidden;
   
   &:nth-of-type(even) {
     background-color:lighten( $light-gray, 6% );
@@ -324,7 +325,6 @@ a[rel~="external"]:after {
     padding:$base-spacing;
     
     figure {
-      overflow:hidden;
       position:relative;
       display:none;
       
