@@ -1,8 +1,12 @@
 div.dashboards {
+  
+  $accent-color: #dae0de;
+  
   .banner {
     @include media($large-screen) {
       background-color:#dae0de;
-      @include retina-image('../img/dashboards-banner', auto 415px, jpg);
+      @include retina-image('../img/office-banner', auto 415px, jpg);
+      position:relative;
       
       &:before {
         display:block;
@@ -15,10 +19,25 @@ div.dashboards {
         content:'';
         margin-left:775px;
       }
+      
+      &:after {
+        content: '';
+        width:817px;
+        height:303px;
+        display:block;
+        @include retina-image('../img/ebola', 817px auto, png);
+        background-repeat:no-repeat;
+        position:absolute;
+        left:50%;
+        bottom:0;
+        margin-left:132px;
+      }
     }
     
     .wrapper .text {
-      max-width:475px;
+      width:auto;
+      max-width:65%;
+      top:120px;
     }
   }
   
@@ -31,15 +50,103 @@ div.dashboards {
       padding: $base-spacing;
       
       @include media($large-screen) {
-        @include span-columns(6);
+        @include span-columns(8);
       }
       
-      p:first-of-type {
+      & > p:first-of-type {
         font-size:rem(22);
       }
       
       & > a {
         @include button(flat, $dark-gray);
+      }
+      
+      .feature-list {
+        @include clearfix;
+        margin-top:$base-spacing * 2;
+        
+        li {
+          clear:both;
+          
+          figure {
+            background-color:$accent-color;
+            display: none;
+            position: relative;
+            border-radius:50%;
+            margin-bottom:$base-spacing;
+            overflow:hidden;
+            max-width:145px;
+            max-height:145px;
+            
+            @include media($large-screen) {
+              display: inline-block;
+              @include span-columns(2 of 8);
+            }
+            
+            &:after {
+              content: '';
+              display: block;
+              margin-top: 100%;
+            }
+            
+            img,
+            span {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              max-height:100%;
+            }
+            
+            span {
+              font-size:80px;
+              color:#fff;
+              
+              &:before {
+                position:absolute;
+                top:50%;
+                left:50%;
+                margin-top:-40px;
+                margin-left:-39px;
+              }
+              
+              &.icon-embed {
+                &:before {
+                  margin-left:-50px;
+                }
+              }
+            }
+          }
+          
+          figcaption {
+            @include media($large-screen) {
+              @include span-columns(6 of 8);
+              @include omega();
+            }
+            
+            h4 {
+              margin-top:30px;
+              margin-bottom:0;
+            }
+          }
+          
+          &:nth-child(1) {
+            figure {
+              background-color:$red;
+            }
+          }
+          &:nth-child(2) {
+            figure {
+              background-color:$orange;
+            }
+          }
+          &:nth-child(3) {
+            figure {
+              background-color:$blue;
+            }
+          }
+        }
       }
     }
     
@@ -47,63 +154,36 @@ div.dashboards {
       padding: $base-spacing;
       
       @include media($large-screen) {
-        @include span-columns(6);
+        @include span-columns(4);
       }
       
-      li {
-        clear:both;
-        
-        figure {
-          border: solid 1px $light-gray;
-          display: none;
-          position: relative;
-          border-radius:50%;
-          margin-bottom:$base-spacing;
-          overflow:hidden;
-          max-width:145px;
-          max-height:145px;
-          
-          @include media($large-screen) {
-            display: inline-block;
-            @include span-columns(2 of 6);
-          }
-          
-          &:after {
-            content: '';
-            display: block;
-            margin-top: 100%;
-          }
-          
-          img {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            max-height:100%;
-          }
-        }
-        
-        figcaption {
-          @include media($large-screen) {
-            @include span-columns(4 of 6);
-            @include omega();
-          }
-          
-          h4 {
-            margin-top:15px;
-            margin-bottom:0;
-          }
-        }
-      }
+      
     }
     .case-study {
-      background-color:rgba( $green, .07 );
+      background-color:rgba( $accent-color, .2 );
       
-      aside {
-        & > img {
-          border-radius:2px;
-          box-shadow: 0 3px 5px transparentize(black, .7);
+      & > img {
+        border-radius:2px;
+        box-shadow: 0 2px 3px transparentize(black, .8);
+      }
+    }
+  }
+  
+  .action {
+    background-color:$accent-color;
+    padding-top:0;
+    padding-bottom:0;
+    
+    .wrapper {
+      padding:$base-spacing;
+      text-align:center;
+      
+      a {
+        @include button(flat, #fff);
+        margin:10px;
+        
+        &.contact {
+          @include button(flat, $dark-gray);
         }
       }
     }
