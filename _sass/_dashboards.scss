@@ -24,7 +24,7 @@ div.dashboards {
       &:after {
         content: '';
         width:817px;
-        height:303px;
+        height:304px;
         display:block;
         @include retina-image('../img/ebola', 817px auto, png);
         background-repeat:no-repeat;
@@ -54,7 +54,8 @@ div.dashboards {
         @include span-columns(8);
       }
       
-      & > p:first-of-type {
+      & > h2 + p:first-of-type,
+      & > h3 + p:first-of-type {
         font-size:rem(22);
       }
       
@@ -156,16 +157,40 @@ div.dashboards {
       
       @include media($large-screen) {
         @include span-columns(4);
+        @include omega();
       }
       
-      
+      .feature-list {
+        figure {
+          float:left;
+          font-size:25px;
+          margin-top:-2px;
+        }
+        figcaption {
+          margin-left:40px;
+        }
+      }
     }
+    
     .case-study {
-      background-color:rgba( $accent-color, .2 );
+      background-color:rgba( $base-accent-color, .06 );
+      @include span-columns(12);
       
-      & > img {
-        border-radius:2px;
-        box-shadow: 0 2px 3px transparentize(black, .8);
+      article {
+        @include media($large-screen) {
+          @include span-columns(6);
+        }
+      }
+      
+      aside {
+        @include media($large-screen) {
+          @include span-columns(6);
+        }
+        
+        & > img {
+          border-radius:2px;
+          box-shadow: 0 2px 3px transparentize(black, .8);
+        }
       }
     }
   }
