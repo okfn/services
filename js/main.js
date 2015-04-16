@@ -228,6 +228,11 @@ $(document).ready(function() {
   },
   { offset: 'bottom-in-view' });
   
+  $('div.hosting .feature .js-accordion-trigger').bind('click', function(e){
+    jQuery(this).parents('section').find('aside').slideToggle('fast'); 
+    e.preventDefault();
+  });
+  
   
   //development
   $('.feature.extensions figure').waypoint(function() {

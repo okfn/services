@@ -12,6 +12,11 @@ div.hosting {
   }
   
   .feature {
+    
+    figcaption > a {
+      @include button(flat, $red);
+    }
+      
     &.setup {
       figure {
         height:250px;
@@ -121,6 +126,14 @@ div.hosting {
         }
       }
     }
+    
+    aside {
+      clear:both;
+      
+      .js & {
+        display:none;
+      }
+    }
   }
   
   .action {
@@ -157,70 +170,72 @@ div.hosting {
       
       .wrapper {
         text-align:left;
-      
-        th {
-          border:none;
-        }
-        td {
-          border-bottom-color: transparentize($red, 0.9);
-        }
-        
-        tbody {
-          
-          .yes {
-            span {
-              color:$red;
-            }
-            
-            &.express {
-              span {
-                color:$dark-blue;
-              }
-            }
-          }
-          
-          tr:hover {
-            td {
-              background-color:$dark-gray;
-              color:$light-gray;
-              
-              &.yes {
-                span {
-                  color:#fff;
-                }
-              }
-            }
-          }
-          
-          .contact {
-            td {
-              text-align:center;
-              border:none;
-              background-color:transparent;
-              
-              a {
-                @include button(flat, $red);
-                color:#fff;
-              }
-              
-              &.express {
-                a {
-                  @include button(flat, $dark-blue);
-                }
-              }
-            }
-            &:hover {
-              td {
-                background-color:transparent;
-              }
-            }
-          }
-        }
       }
     }
     
     &.is-expanded aside {
       display: block;
+    }
+  }
+  
+  #compare {
+    th {
+      border:none;
+    }
+    td {
+      border-bottom-color: transparentize($red, 0.9);
+    }
+    
+    tbody {
+      
+      .yes {
+        span {
+          color:$red;
+        }
+        
+        &.express {
+          span {
+            color:$dark-blue;
+          }
+        }
+      }
+      
+      tr:hover {
+        td {
+          background-color:$dark-gray;
+          color:$light-gray;
+          
+          &.yes {
+            span {
+              color:#fff;
+            }
+          }
+        }
+      }
+      
+      .contact {
+        td {
+          text-align:center;
+          border:none;
+          background-color:transparent;
+          
+          a {
+            @include button(flat, $red);
+            color:#fff;
+          }
+          
+          &.express {
+            a {
+              @include button(flat, $dark-blue);
+            }
+          }
+        }
+        &:hover {
+          td {
+            background-color:transparent;
+          }
+        }
+      }
     }
   }
 }
