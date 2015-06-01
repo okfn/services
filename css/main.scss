@@ -378,7 +378,7 @@ ul.quotes {
     background-position:center center;
     background-attachment:fixed;
     position:relative;
-    background-image:url(../img/quote-female.jpg);
+    background-image:url(../img/quote-group.jpg);
     
     blockquote {
       @include outer-container;
@@ -434,6 +434,15 @@ ul.quotes {
     
     &.male {
       background-image:url(../img/quote-male.jpg);
+    }
+    &.male-2 {
+      background-image:url(../img/quote-male-2.jpg);
+    }
+    &.female {
+      background-image:url(../img/quote-female.jpg);
+    }
+    &.female-2 {
+      background-image:url(../img/quote-female-2.jpg);
     }
     &.rodolfo {
       background-image:url(../img/rodolfo.jpg);
