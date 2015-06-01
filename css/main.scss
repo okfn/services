@@ -441,6 +441,12 @@ ul.quotes {
     
     &.slick-slide {
       background-attachment:scroll; /* for Chrome bug */
+      display:table;
+      
+      & > span {
+        display:table-cell;
+        vertical-align:middle;
+      }
       
       &:after {
         background-attachment:scroll; /* for Chrome bug */
