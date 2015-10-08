@@ -16,12 +16,12 @@ header.navigation {
   z-index: 999;
   background-color:transparentize($navigation-background, 1);
   @include transition (all 0.2s ease-in-out);
-  
+
   @include media($large-screen) {
     position:fixed;
     margin-top:20px;
   }
-  
+
   .scrolled & {
     background-color:$navigation-background;
     margin-top:0;
@@ -35,7 +35,7 @@ header.navigation {
   }
 
   .logo {
-    float: left;    
+    float: left;
     max-height: $navigation-height;
     background-image:url(../img/logo.png);
     background-repeat:no-repeat;
@@ -47,25 +47,25 @@ header.navigation {
     background-size:170px auto;
     margin-left:1em;
     margin-top:12px;
-    
+
     @include media($large-screen) {
       background-size:250px auto;
       height:75px;
       width: 250px;
       margin-top:0;
     }
-    
+
     .scrolled & {
       background-size:170px auto;
       height:50px;
       margin-top:12px;
     }
   }
-  
+
   &.background--dark {
     .logo {
       background-image:url(../img/logo-white.png);
-      
+
       .scrolled & {
         background-image:url(../img/logo.png);
       }
@@ -74,7 +74,7 @@ header.navigation {
 
 
   // Mobile view
-  
+
   .navigation-menu-button {
     color: $navigation-color;
     display: block;
@@ -97,13 +97,13 @@ header.navigation {
 
 
   // Nav menu
-  
+
   .nav {
     float: right;
     margin-right:1em;
   }
 
-  ul#navigation-menu {    
+  ul#navigation-menu {
     -webkit-transform-style: preserve-3d; // stop webkit flicker
     clear: both;
     overflow: visible;
@@ -112,7 +112,8 @@ header.navigation {
     display: none;
     margin: 0;
     padding: 0;
-    
+    position:relative;
+
     @include media ($horizontal-bar-mode) {
       display: inline;
     }
@@ -127,13 +128,13 @@ header.navigation {
     display: inline-block;
     text-decoration: none;
     width: auto;
-    
+
     &.current {
       & > a {
         background-color: transparentize($navigation-background-hover, 0.9);
       }
     }
-    
+
     &:hover,
     &.current:hover {
       a {
@@ -141,7 +142,7 @@ header.navigation {
         color: $navigation-color-hover;
       }
     }
-    
+
     .scrolled & {
       line-height:$navigation-height;
     }
@@ -155,7 +156,7 @@ header.navigation {
       border-radius:15px;
       margin-top: ($navigation-height - 30px) / 2;
       margin-bottom: ($navigation-height - 30px) / 2;
-      
+
       .scrolled & {
         margin-top:0;
         margin-bottom:0;
@@ -166,7 +167,7 @@ header.navigation {
         color: $navigation-color-hover;
       }
     }
-    
+
     &.contact {
       a {
         background-color: $green;
@@ -183,7 +184,7 @@ header.navigation {
   // Sub menus
 
   li.more.nav-link {
-    
+
     > ul > li:first-child a  {
       padding-top: 1em;
     }
@@ -226,12 +227,12 @@ header.navigation {
         font-size: 1.2em;
         position: absolute;
         right: $navigation-submenu-padding / 2;
-      }      
+      }
     }
 
     &:hover > .submenu {
       display: block;
-    }    
+    }
   }
 
   ul.submenu {
@@ -247,19 +248,19 @@ header.navigation {
     .submenu {
       left: $navigation-submenu-width - .2em;
       top: 0;
-      
+
       &:before {
         display:none;
       }
     }
-    
+
     &.split {
       @include columns(2);
       @include column-gap(0);
       width:$navigation-submenu-width * 2 + $navigation-submenu-padding;
       left:- ($navigation-submenu-width / 2 + ($navigation-submenu-padding / 2));
       padding:$navigation-submenu-padding * 1.5 $navigation-submenu-padding /2 $navigation-submenu-padding $navigation-submenu-padding / 2;
-      
+
       & > span {
         color:$navigation-color-hover;
         text-transform:uppercase;
@@ -271,7 +272,7 @@ header.navigation {
         border-bottom:solid 1px #fff;
         opacity:0.6;
         line-height:normal;
-        
+
         &:nth-of-type(2) {
           margin-top:8px; //force break
         }
@@ -286,7 +287,7 @@ header.navigation {
       &:last-child > a {
         margin-bottom: 0.7em;
       }
-      
+
       &.more {
         a:after {
           top:50%;
@@ -306,7 +307,7 @@ header.navigation {
         margin-bottom:0;
       }
     }
-    
+
     &:before {
       content:'';
       @include triangle(12px, $navigation-background-hover, up);
@@ -335,25 +336,25 @@ header.navigation {
     li.more.nav-link > a:after {
       color: #fff;
     }
-    
+
     li.more.nav-link:hover > a:after {
       color: $dark-gray;
     }
-    
+
     ul.submenu {
       opacity:0.9;
       background-color:#fff;
-      
+
       li {
         a {
           color:$dark-gray;
         }
       }
-      
+
       &:before {
         border-bottom-color:#fff;
       }
-      
+
       &.split {
         & > span {
           color:$dark-gray;
