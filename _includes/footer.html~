@@ -90,12 +90,3 @@
   ga('send', 'pageview');
 
 </script>
-
-<!-- Overlay close -->
-<script>
-    $('#boxclose').click(function(){
-        $('#modal').slideUp(500,function(){
-            $('#overlay').fadeOut('fast');
-        });
-    });
-</script>

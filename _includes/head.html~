@@ -76,6 +76,9 @@ body {
   font-weight: bold;
   font-style: normal;
 }
+#maincontent {
+  margin: 10px;
+}
 #modal a.boxclose {
   float:right;
   margin-top: -30px;
