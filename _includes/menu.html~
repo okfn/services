@@ -5,6 +5,7 @@
             <li><a href="{{ "/hosting/" | prepend: site.baseurl }}">Deployments &amp; Hosting</a></li>
             <li><a href="{{ "/development/" | prepend: site.baseurl }}">Development</a></li>
             <li><a href="{{ "/support/" | prepend: site.baseurl }}">Support</a></li>
+            <li><a href="{{ "/support/" | prepend: site.baseurl }}">Test</a></li>
           </ul>
         </li>
         

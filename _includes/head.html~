@@ -96,4 +96,15 @@ a.boxclose{
 }
 </style>
 
+<!-- Overlay close -->
+<script>
+function() {
+    $('#boxclose').click(function(){
+        $('#modal').animate({'top':'-200px'},500,function(){
+            $('#overlay').fadeOut('fast');
+        });
+    });
+}
+</script>
+
 </head>
