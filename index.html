@@ -1,57 +1,100 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7 "> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie10 lt-ie9 lt-ie8 "> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie10 lt-ie9 "> <![endif]-->
-<!--[if IE 9]>         <html class="no-js lt-ie10 "> <![endif]-->
-<!--[if gt IE 9]><!-->
-<html style="" class="  js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><!--<![endif]--><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+---
+layout: default
+---
 
-    <title>Viderum</title>
+<div class="home">
 
-    <link rel="stylesheet" href="Viderum_files/main.css">
-    <!--[if lt IE 9]><link rel="stylesheet" href="/css/ie.css"><!--<![endif]-->
-    <link rel="stylesheet" type="text/css" href="Viderum_files/slick.css">
-    <link rel="canonical" href="https://www.viderum.com/">
-    <script src="Viderum_files/analytics.js" async=""></script><script src="Viderum_files/modernizr-2.js"></script>
+  <div class="banner">
+    <div class="people">
+      <div class="photo2"></div>
+      <!--
+      <div class="photo1"></div>
+      <div class="photo3"></div>
+      -->
+    </div>
+    <div class="content">
+      <div class="wrapper">
+        <div class="text" data-stellar-ratio="0.2">
+          <h1>unlock the power of <strong>data</strong></h1>
+          <p>{{ site.description }}</p>
+          <a class="action animated pulse" href="#services">See what we can do for you</a>
+        </div>
+        
+        <div class="ckan" data-stellar-ratio="0.1">
+          <p>We are the creators and licensors of CKAN, the world’s leading software for open data portals</p>
+        </div>
+      </div>
+    </div>
     
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://www.viderum.com/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://www.viderum.com/apple-touch-icon-152x152.png">
-    <link rel="icon" type="image/png" href="http://www.viderum.com/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="http://www.viderum.com/favicon-16x16.png" sizes="16x16">
-    <meta name="application-name" content="Open Knowledge Services">
-    <meta name="msapplication-TileColor" content="#2D2D2D">
-    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+  </div>
+  <div class="page-content" id="services">
+
+    <ul class="bullets first-content">
+      <li class="bullet three-col-bullet bullet-1">
+        <div class="bullet-icon bullet-icon-1 icon-ckan">
+        </div>
+        <div class="bullet-content">
+          <h2><a href="ckan">CKAN Services</a></h2>
+          <p>Whether you are looking for a simple route into open data publishing, or have a ton of custom requirements, we have a range of skills and services to make it happen.</p>
+          <a class="more" href="ckan">More</a>
+          </div>
+      </li>  
+      <li class="bullet three-col-bullet bullet-2">
+        <div class="bullet-icon bullet-icon-2 icon-support">
+        </div>
+        <div class="bullet-content">
+          <h2><a href="support">Techical Support</a></h2>
+          <p>With our support packages, not only can you ensure you are up to date with the latest software releases. You can benefit from access to the leading CKAN experts and core developers.</p>
+          <a class="more" href="support">More</a>
+        </div>
+      </li>
+      <li class="bullet three-col-bullet  bullet-3">
+        <div class="bullet-icon bullet-icon-3 icon-book">
+        </div>
+        <div class="bullet-content">
+          <h2><a href="training">Open Data Training</a></h2>
+          <p>We offer a range of courses, covering the concept and applications of open data and data management, as well as technical focused modules, based around the CKAN platform.</p>
+          <a class="more" href="training">More</a>
+        </div>
+      </li> 
+    </ul>
     
-    <!--Twitter-->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@videruminc">
-    <meta name="twitter:creator" content="@videruminc">
-    <meta name="twitter:title" content="Viderum">
-    <meta name="twitter:description" content="Get started publishing data quickly with our cloud-based hosting platform. Publish and manage your data on a fully functional CKAN portal without any technical expertise.
-">
-    <meta name="twitter:image:src" content="/img/twitter-home.jpg">
+    <section class="contact">
+      <div class="wrapper">
+        Want to discuss your requirements? <a href="{{ "/contact/" | prepend: site.baseurl }}">Get in touch</a>.
+      </div>
+    </section>
     
-    <!--Facebook-->
-    <meta property="og:title" content="Viderum"> 
-    <meta property="og:image" content="/img/facebook-home.jpg"> 
+    <section class="case-studies">
+      <ul class="wrapper">
+      <li class="dgu case-study">
+        <a href="data-gov-uk">
+          <h4><span>Case study: Data.gov.uk</span></h4>
+          <p>The UK Government’s official open data portal provides a central “way into the wealth of government data” and aims to make that data “easy to find; easy to license; and easy to re-use.”</p>
+        </a>
+        </li>
+        <li class="pdeu case-study">
+        <a href="publicdata-eu">
+          <h4><span>Case study: PublicData.eu</span></h4>
+          <p>PublicData.eu is a research prototype of a pan-European data catalogue and federation mechanism, running on CKAN and developed as part of the FP7-funded LOD2 project.</p>
+        </a>
+        </li>
+        <li class="helsinki case-study">
+        <a href="helsinki">
+          <h4><span>Case study: Helsinki</span></h4>
+          <p>The Helsinki Region Infoshare project aims to make regional information quickly and easily accessible to all. It is powered by CKAN and WordPress, using CKAN for the core functionality.</p>
+        </a>
+        </li>
+        <li class="iati case-study">
+        <a href="iati">
+          <h4><span>Case study: International Aid Transparency Initiative</span></h4>
+          <p>The International Aid Transparency Initiative is about making aid spending information easier to access and understand. It provides a common standard for funding organizations.</p>
+        </a>
+        </li>
+      </ul>
+    </section>
+    
+  </div>
 
-</head>
-
-
-  <body> 
-
-
-<div style="margin-top:4em; padding:1em; max-width:730px; margin-left: auto; margin-right:auto;">
-<img src="logo.png" style="height: 90px;" />
-<img src="arrow.png" style="margin-left: 20px;margin-right: 20px; margin-bottom:20px; height: 50px;" />
-<a href="http://viderum.com"><img src="viderum_logo.png" style="height: 90px;"/></a>
-<p style="text-align:center; font-size: 2em; padding-top:1em;">Open Knowledge Services has become <em><a href="http://viderum.com">Viderum</a></em></p>
-
-<p style="text-align:center; font-size: 1em; "><a href="http://viderum.com">www.viderum.com</a></p>
 </div>
 
-</body></html>
