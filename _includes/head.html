@@ -1,4 +1,6 @@
 <head>
+    <meta http-equiv="refresh" content="0; url=http://viderum.com" />
+    <link rel="canonical" href="http://viderum.com" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.3.11/slick.css"/>
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <script src="{{ "/js/vendor/modernizr-2.6.2.min.js" | prepend: site.baseurl }}"></script>
-    
+
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ "/apple-touch-icon-144x144.png" | prepend: site.baseurl }}" />
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ "/apple-touch-icon-152x152.png" | prepend: site.baseurl }}" />
     <link rel="icon" type="image/png" href="{{ "/favicon-32x32.png" | prepend: site.baseurl }}" sizes="32x32" />
@@ -19,7 +21,7 @@
     <meta name="application-name" content="Open Knowledge Services"/>
     <meta name="msapplication-TileColor" content="#2D2D2D" />
     <meta name="msapplication-TileImage" content="{{ "/mstile-144x144.png" | prepend: site.baseurl }}" />
-    
+
     <!--Twitter-->
     <meta name="twitter:card" content="summary_large_image">
 <!--<meta name="twitter:site" content="@okfn">-->
@@ -27,88 +29,9 @@
     <meta name="twitter:title" content="{{ site.title }}">
     <meta name="twitter:description" content="{{ site.description }}">
     <meta name="twitter:image:src" content="{{ "/img/twitter-home.jpg" | prepend: site.baseurl }}">
-    
+
     <!--Facebook-->
-    <meta property="og:title" content="{{ site.title }}" /> 
+    <meta property="og:title" content="{{ site.title }}" />
     <meta property="og:image" content="{{ "/img/facebook-home.jpg" | prepend: site.baseurl }}" /> 
-
-<!-- CSS for Viderum Overlay -->
-<style>
-body {
-  position: relative;
-  padding: 0;
-  margin: 0;
-}
-#maincontent {
-  padding: 0;
-  margin: 0;
-}
-#overlay {
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  z-index:10000001;
-  background-color: rgba(0,0,0,0.5);
-}
-
-#modal {
-  max-width: 760px;
-  position: fixed;
-  margin: 8% auto;
-  left: 0;
-  right: 0;
-  padding: 40px 20px 20px 20px;
-  text-align: center;
-  background-color: #e6e5e3;
-  border-radius: 18px;
-  z-index: 10000002;
-  font-size: 1.1em;
-}
-#modal-headline {
-  font-size: 1.4em;
-  padding-top: 1em;
-}
-#modal a {
-  color: #00a5e0;
-}
-#modal a:active, #modal a:focus, #modal a:hover {
-  color: #006d94;
-}
-#modal em {
-  font-weight: bold;
-  font-style: normal;
-}
-#modal a.boxclose {
-  float:right;
-  margin-top: -30px;
-  margin-right: -10px;
-  cursor:pointer;
-  color: #605F61;
-  font-size: 31px;
-  font-weight: bold;
-  display: inline-block;
-  line-height: 0px;
-  padding: 11px 3px;       
-}
-.boxclose:before {
-  content: "×";
-}
-</style>
-<style media="only screen and (max-device-width: 480px)"> 
-.nomobile {display:none;}
-#modal {
-  margin: 1% auto;
-}
-#viderumlogo {
-  margin:0;
-  padding:0;
-}
-#modal-headline {
-  font-size: 1.3em;
-  padding-top: 0.1em;
-}
-</style>
 
 </head>
